@@ -43,5 +43,13 @@ module.exports = function(environment) {
 
   }
 
+  ENV.contentSecurityPolicy = {
+    'default-src': "'none'",
+    'img-src': "'self' gravatar.com",
+    'style-src': "'self' 'unsafe-inline'",
+    'report-uri': "'self'",
+    'connect-src': ENV.apiURL
+  };
+
   return ENV;
 };
