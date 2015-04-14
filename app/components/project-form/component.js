@@ -7,9 +7,9 @@ export default Ember.Component.extend({
       selectYears: 15 // Creates a dropdown of 15 years to control year
     });
   },
-  isDirty: function() {
+  isNew: function() {
     var model = this.get('model');
-    return !model.get('isNew');
+    return model.get('isNew');
   }.property('model'),
   actions: {
     save: function() {
