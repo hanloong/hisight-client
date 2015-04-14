@@ -1,6 +1,6 @@
 import DS from 'ember-data';
 
-export default DS.Model.extend({
+let Idea = DS.Model.extend({
   name:                 DS.attr('string'),
   description:          DS.attr('string'),
   score:                DS.attr('number'),
@@ -11,3 +11,12 @@ export default DS.Model.extend({
   user:                 DS.belongsTo('user'),
   comments:             DS.hasMany('comment', {async: true})
 });
+
+Idea.reopenClass({
+  FIXTURES: [
+    {id: 1, name: 'Great Idea', project: 1},
+    {id: 2, name: 'Another Great Idea', project: 1}
+  ]
+});
+
+export default Idea;

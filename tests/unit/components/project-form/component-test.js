@@ -3,7 +3,7 @@ import {
   test
 } from 'ember-qunit';
 
-moduleForComponent('date-picker', {
+moduleForComponent('project-form', {
   // Specify the other units that are required for this test
   // needs: ['component:foo', 'helper:bar']
 });

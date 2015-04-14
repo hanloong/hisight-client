@@ -6,9 +6,12 @@ var Router = Ember.Router.extend({
 });
 
 export default Router.map(function() {
-  this.route('projects', {path: '/'})
+  this.route('projects', {path: '/'});
+
   this.route('projects', {path: '/projects'}, function() {
     this.route('new');
+    this.route('show', {path: '/:project_id'});
+    this.route('edit', {path: '/:project_id/edit'});
   });
 
 });

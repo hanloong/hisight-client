@@ -9,5 +9,13 @@ export default Ember.Route.extend({
   },
   model: function() {
     return this.store.createRecord('project');
+  },
+  actions: {
+    createProject: function(newProject) {
+      newProject.save().then((project) => {
+        this.transitionTo('projects');
+      }).catch(function() {
+      });
+    }
   }
 });
