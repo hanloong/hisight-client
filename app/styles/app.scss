@@ -1,3 +1,9 @@
+@import 'components/color';
+@import 'components/variables';
+
+$primary-color: color("pink", "lighten-2");
+$radio-fill-color: color("light-blue", "darken-2");
+
 @import 'materialize';
 
 /* FIXME: Workaround for https://github.com/Dogfalo/materialize/issues/1079 */
@@ -16,4 +22,52 @@ header, main, footer, nav {
   header, main, footer, nav {
     padding-left: 0;
   }
+}
+
+.side-nav ul {
+  margin: 0;
+}
+
+.action-float {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin: 20px;
+}
+
+.user-profile {
+  padding: 15px 5px;
+  .settings {
+    position: absolute;
+    top: 0;
+    right: 0;
+    a {
+      color: color('blue-grey', 'lighten-1');
+      &:hover, &:focus {
+        color: color('blue-grey', 'lighten-3');
+      }
+    }
+  }
+}
+
+.scoreboard {
+  .score {
+    padding: 10px 0;
+    &:hover, &:focus {
+      h3, h4, h5, h6, small {
+        opacity: 1;
+      }
+    }
+  }
+  h3, h4, h5, h6, small {
+    padding: 0;
+    margin: 0;
+    opacity: 0.6;
+  }
+}
+
+.brand-logo .fa {
+  border: 1px solid white;
+  border-radius: 4px;
+  padding: 2px 6px;
 }

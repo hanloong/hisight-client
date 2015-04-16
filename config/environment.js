@@ -45,7 +45,7 @@ module.exports = function(environment) {
 
   ENV.contentSecurityPolicy = {
     'default-src': "'none'",
-    'img-src': "'self' gravatar.com",
+    'img-src': "'self' avatars1.githubusercontent.com gravatar.com",
     'style-src': "'self' 'unsafe-inline'",
     'report-uri': "'self'",
     'connect-src': ENV.apiURL

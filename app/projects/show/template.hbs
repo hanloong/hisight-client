@@ -1,6 +1,6 @@
 <div class="row">
   {{#each model.ideas as |idea|}}
-  <div class="col s12">
+  <div class="col s12 l6">
     <div class="card">
       <div class="card-content">
         <span class="card-title grey-text text-darken-4">{{idea.name}}</span>
@@ -12,4 +12,7 @@
     </div>
   </div>
   {{/each}}
+  <div class='action-float'>
+    <a title='Submit new idea' class="btn-floating btn-large waves-effect waves-light red"><i class="mdi-content-add"></i></a>
+  </div>
 </div>

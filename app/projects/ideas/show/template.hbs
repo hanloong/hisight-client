@@ -2,15 +2,58 @@
   <div class="col s12 m8 l9">
     <div class="card">
       <div class="card-content">
-        <span class="card-title grey-text text-darken-4">{{model.idea.name}}</span>
-        <p>{{model.idea.description}}</p>
+        <span class="card-title grey-text text-darken-4">{{model.name}}</span>
+        <p>{{model.description}}</p>
       </div>
       <div class="card-action">
       </div>
     </div>
+
+    <ul class='collection'>
+      <li class='collection-item'>
+        <h5>
+        <i class='mdi-action-question-answer'></i>
+        Comments
+        </h5>
+      </li>
+      {{#each comment in model.comments}}
+      <li class='collection-item avatar'>
+        <i class="mdi-av-play-arrow circle red"></i>
+        <span class="title">Title</span>
+        <p>{{comment.comment}}</p>
+      </li>
+      {{/each}}
+    </ul>
   </div>
 
   <div class="col s12 m4 l3">
+
+    <div class="card">
+      <div class="card-content">
+        <h5 class="grey-text center-align text-darken-4">Rating</h5>
+        <div class="row center-align">
+          <div class='green-text score'>
+            <h2>99.5</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-content">
+        <h5 class="grey-text center-align text-darken-4">Actions</h5>
+        <br/>
+        <div class="row center-align">
+          <div class='col s6'>
+            <a class="btn-floating btn-large waves-effect waves-light light-blue"><i class="mdi-navigation-check"></i></a>
+          </div>
+          <div class='col s6'>
+            <a class="btn-floating btn-large waves-effect waves-light pink lighten-2"><i class="mdi-action-bookmark"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="card">
       <div class="card-content">
         <h5 class="grey-text center-align text-darken-4">Influence</h5>

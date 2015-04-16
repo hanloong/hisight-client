@@ -1,9 +1,35 @@
-<ul id="slide-out" class="side-nav fixed">
-  <li>{{#link-to 'projects'}}Projects{{/link-to}}</li>
-  <li>{{#link-to 'projects.new'}}Create project{{/link-to}}</li>
+<div id="slide-out" class="side-nav fixed">
+  <div class='grey-text text-lighten-5 user-profile blue-grey darken-3'>
+    <img class='circle responsive-img' src='https://avatars1.githubusercontent.com/u/195477?v=3&s=460' width='60' height='60'/>
+    <h6>Han Loong Liauw</h6>
+    <small>Software Engineer</small>
+    <div class='settings'>
+      <a href='#'><i class='small mdi-action-settings'></i></a>
+    </div>
+  </div>
+  <ul>
+    <li>{{#link-to 'projects'}}Projects{{/link-to}}</li>
+    <li>{{#link-to 'projects.new'}}Create project{{/link-to}}</li>
+  </ul>
+  <ul class='hide-on-large-only'>
+    <li><a href="sass.html"><i class="mdi-action-search"></i> Search</a></li>
+    <li><a href="exit.html"><i class="mdi-action-settings-power"> Sign out</i></a></li>
+  </ul>
 
-  <li class='hide-on-large-only'><a href="sass.html"><i class="mdi-action-search"></i> Search</a></li>
-  <li class='hide-on-large-only'><a href="user.html"><i class="mdi-action-perm-identity"> User profile</i></a></li>
-  <li class='hide-on-large-only'><a href="user.html"><i class="mdi-social-notifications"> Notifications</i></a></li>
-  <li class='hide-on-large-only'><a href="exit.html"><i class="mdi-action-settings-power"> Sign out</i></a></li>
-</ul>
+  <div class='scoreboard'>
+    <div class='row'>
+      <div class='score light-blue lighten-1 white-text col s12 center-align'>
+        <h3>6</h3>
+        <small>votes left</small>
+      </div>
+      <div class='score teal lighten-1 white-text col s6 center-align'>
+        <h5>6</h5>
+        <small>unlocked</small>
+      </div>
+      <div class='score pink lighten-2 white-text col s6 center-align'>
+        <h5>6</h5>
+        <small>used</small>
+      </div>
+    </div>
+  </div>
+</div>
