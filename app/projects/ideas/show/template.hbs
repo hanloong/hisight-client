@@ -1,3 +1,15 @@
+<div class='breadcrumbs grey-text'>
+  {{#link-to 'dashboard.index'}}
+    <i class='mdi-action-home'></i>
+    Home
+  {{/link-to}}
+  <i class='mdi-navigation-chevron-right'></i>
+  {{#link-to 'projects'}} Projects {{/link-to}}
+  <i class='mdi-navigation-chevron-right'></i>
+  {{#link-to 'projects.show' model.project}} {{model.project.name}} {{/link-to}}
+  <i class='mdi-navigation-chevron-right'></i>
+  {{model.name}}
+</div>
 <div class="row">
   <div class="col s12 m8 l9">
     <div class="card">
@@ -18,7 +30,7 @@
       </li>
       {{#each comment in model.comments}}
       <li class='collection-item avatar'>
-        <i class="mdi-av-play-arrow circle red"></i>
+        <i class='mdi-social-person circle grey lighten-2'></i>
         <span class="title">Title</span>
         <p>{{comment.comment}}</p>
       </li>

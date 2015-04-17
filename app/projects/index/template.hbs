@@ -1,3 +1,11 @@
+<div class='breadcrumbs grey-text'>
+  {{#link-to 'dashboard.index'}}
+    <i class='mdi-action-home'></i>
+    Home
+  {{/link-to}}
+  <i class='mdi-navigation-chevron-right'></i>
+  Projects
+</div>
 <div class="row">
   {{#each model.projects as |project|}}
   <div class="col s12 l6">

@@ -3,6 +3,8 @@
 
 $primary-color: color("pink", "lighten-2");
 $radio-fill-color: color("light-blue", "darken-2");
+$input-focus-color: $primary-color;
+$button-color: color("grey", "darken-1");
 
 @import 'materialize';
 
@@ -19,8 +21,28 @@ $radio-fill-color: color("light-blue", "darken-2");
   }
 }
 
+.container {
+  padding: 0;
+}
+
 .side-nav ul {
   margin: 0;
+}
+
+nav {
+  .search-form {
+    display: inline;
+  }
+}
+
+#search-modal.modal {
+  @media #{$medium-and-down} {
+   width: 90%;
+  }
+}
+
+.breadcrumbs {
+  margin: 20px 10px 10px 10px;
 }
 
 .action-float {
@@ -32,14 +54,15 @@ $radio-fill-color: color("light-blue", "darken-2");
 
 .user-profile {
   padding: 15px 5px;
+  background: url('/assets/images/profile-bg.png');
   .settings {
     position: absolute;
     top: 0;
     right: 0;
     a {
-      color: color('blue-grey', 'lighten-1');
+      color: color('grey', 'darken-1');
       &:hover, &:focus {
-        color: color('blue-grey', 'lighten-3');
+        color: color('grey', 'lighten-1');
       }
     }
   }
@@ -48,21 +71,16 @@ $radio-fill-color: color("light-blue", "darken-2");
 .scoreboard {
   .score {
     padding: 10px 0;
-    &:hover, &:focus {
-      h3, h4, h5, h6, small {
-        opacity: 1;
-      }
-    }
   }
   h3, h4, h5, h6, small {
     padding: 0;
     margin: 0;
-    opacity: 0.6;
   }
 }
 
-.brand-logo .fa {
-  border: 1px solid white;
-  border-radius: 4px;
-  padding: 2px 6px;
+.card .card-action a {
+  color: color('pink', 'lighten-2');
+  &:hover, &:focus {
+    color: color('pink', 'darken-2');
+  }
 }

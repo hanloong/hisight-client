@@ -1,3 +1,14 @@
+<div class='breadcrumbs grey-text'>
+  {{#link-to 'dashboard.index'}}
+    <i class='mdi-action-home'></i>
+    Home
+  {{/link-to}}
+  <i class='mdi-navigation-chevron-right'></i>
+  {{#link-to 'projects'}} Projects {{/link-to}}
+  <i class='mdi-navigation-chevron-right'></i>
+  New project
+</div>
+
 <div class="row">
-  {{project-form model=model save='createProject' title='Create new project'}}
+  {{forms/project-edit model=model save='createProject' title='Create new project'}}
 </div>
