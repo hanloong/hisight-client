@@ -23,7 +23,25 @@
     </div>
   </div>
   {{/each}}
-  <div class='action-float'>
-    <a title='Submit new idea' class="btn-floating btn-large waves-effect waves-light red"><i class="mdi-content-add"></i></a>
+
+  <div class='action-float center'>
+    <ul>
+      <li>
+        <a class="btn-floating btn-medium waves-effect waves-light grey tooltipped" data-tooltip="Edit project" data-position="left">
+          {{fa-icon 'edit'}}
+        </a>
+      </li>
+      <li>
+        {{#link-to 'projects.new' class='btn-floating btn-medium waves-effect waves-light green tooltipped' data-tooltip="Create new project" data-position="left"}}
+          {{fa-icon 'tasks'}}
+        {{/link-to}}
+      </li>
+      <li>
+        <a class="btn-floating btn-medium waves-effect waves-light amber tooltipped" data-tooltip="Create new idea" data-position="left">
+          {{fa-icon 'lightbulb-o'}}
+        </a>
+      </li>
+    </ul>
+    <a class="btn-floating btn-large waves-effect waves-light light-blue"><i class="mdi-content-add"></i></a>
   </div>
 </div>

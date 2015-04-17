@@ -46,10 +46,19 @@ nav {
 }
 
 .action-float {
-  position: absolute;
+  position: fixed;
   right: 0;
   bottom: 0;
   margin: 20px;
+  ul {
+    display: none;
+    li {
+      margin: 10px 0;
+    }
+  }
+  &:hover ul {
+    display: block;
+  }
 }
 
 .user-profile {
