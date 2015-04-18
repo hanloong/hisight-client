@@ -7,7 +7,7 @@ export default Ember.Route.extend({
   actions: {
     updateProject: function(editProject) {
       editProject.save().then((project) => {
-        this.transitionTo('projects');
+        this.transitionTo('projects.show', project);
       }).catch(function() {
       });
     }
