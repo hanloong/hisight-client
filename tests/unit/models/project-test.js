@@ -5,7 +5,7 @@ import {
 
 moduleForModel('project', {
   // Specify the other units that are required for this test.
-  needs: []
+  needs: ['model:idea', 'model:user', 'model:comment']
 });
 
 test('it exists', function(assert) {

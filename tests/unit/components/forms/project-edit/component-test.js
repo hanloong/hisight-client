@@ -5,7 +5,7 @@ import {
 
 moduleForComponent('forms/project-edit', {
   // Specify the other units that are required for this test
-  // needs: ['component:foo', 'helper:bar']
+  needs: ['component:inputs/date-picker']
 });
 
 test('it renders', function(assert) {
