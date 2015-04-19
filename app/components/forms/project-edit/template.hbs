@@ -19,7 +19,7 @@
 
       <div class="row">
         <div class="input-field col s12">
-          <input id='deadline' type='date' class='datepicker' name='deadline' value="{{model.expires_at}}" />
+          <input type="date" name='expires_at' id='deadline' class='datepicker' value="{{moment model.expires_at 'YYYY/MM/DD'}}" />
           <label {{bind-attr class="isNew::active"}} for="deadline">Deadline</label>
         </div>
       </div>
@@ -28,7 +28,7 @@
         <div class='col s12'>
           <div class="switch">
             <label>
-              {{input type="checkbox" name="allow_anonymous" checked=model.allow_anonymous}}
+              {{input type="checkbox" checked=model.allow_anonymous}}
               <span class="lever"></span>
               Allow anonymous posts and comments
             </label>

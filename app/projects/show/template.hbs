@@ -1,7 +1,7 @@
 <div class='breadcrumbs grey-text'>
   {{#link-to 'dashboard.index'}}
-    <i class='mdi-action-home'></i>
-    Home
+  <i class='mdi-action-home'></i>
+  Home
   {{/link-to}}
   <i class='mdi-navigation-chevron-right'></i>
   {{#link-to 'projects'}} Projects {{/link-to}}
@@ -23,25 +23,25 @@
     </div>
   </div>
   {{/each}}
+</div>
 
-  <div class='action-float center'>
-    <ul>
-      <li>
-        <a class="btn-floating btn-medium waves-effect waves-light grey tooltipped" data-tooltip="Edit project" data-position="left">
-          {{fa-icon 'edit'}}
-        </a>
-      </li>
-      <li class='tooltipped' data-position="left" data-tooltip='Create new project'>
-        {{#link-to 'projects.new' class='btn-floating btn waves-effect waves-light green'}}
-          {{fa-icon 'tasks'}}
-        {{/link-to}}
-      </li>
-      <li>
-        <a class="btn-floating btn-medium waves-effect waves-light amber tooltipped" data-tooltip="Create new idea" data-position="left">
-          {{fa-icon 'lightbulb-o'}}
-        </a>
-      </li>
-    </ul>
-    <a class="btn-floating btn-large waves-effect waves-light light-blue"><i class="mdi-content-add"></i></a>
-  </div>
+<div class='action-float center'>
+  <ul>
+    <li class='tooltipped' data-position="left" data-tooltip='Edit {{model.project.name}}'>
+    {{#link-to 'projects.edit' model.project class='btn-floating btn waves-effect waves-light pink'}}
+      {{fa-icon 'edit'}}
+    {{/link-to}}
+    </li>
+    <li class='tooltipped' data-position="left" data-tooltip='Create new project'>
+    {{#link-to 'projects.new' class='btn-floating btn waves-effect waves-light amber'}}
+      {{fa-icon 'tasks'}}
+    {{/link-to}}
+    </li>
+    <li class='tooltipped' data-position="left" data-tooltip='Submit a new idea'>
+    {{#link-to 'projects.ideas.new' model.project class='btn-floating btn waves-effect waves-light green'}}
+      {{fa-icon 'lightbulb-o'}}
+    {{/link-to}}
+    </li>
+  </ul>
+  <a class="btn-floating btn-large waves-effect waves-light light-blue"><i class="mdi-content-add"></i></a>
 </div>

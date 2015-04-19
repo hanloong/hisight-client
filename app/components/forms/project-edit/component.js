@@ -2,18 +2,26 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   didInsertElement: function() {
-    this.$('.datepicker').pickadate({
-      selectMonths: true, // Creates a dropdown to control month
-      selectYears: 15 // Creates a dropdown of 15 years to control year
+    var input = this.$('.datepicker').pickadate({
+      format: 'Project will expire on dddd, dd mmm, yyyy',
+      submitFormat: 'yyyy/mm/dd',
+      hiddenName: true
     });
+    var picker = input.pickadate('picker');
+    picker.set('select', new Date(this.get('expiresAt')));
   },
   isNew: function() {
     var model = this.get('model');
     return model.get('isNew');
   }.property('model'),
+  expiresAt: function() {
+    var model = this.get('model');
+    return model.get('expires_at');
+  }.property('model'),
   actions: {
     save: function() {
-      this.sendAction('save', this.get('model'));
+      var expires_at = this.$('input[name="expires_at"]').val();
+      this.sendAction('save', this.get('model'), expires_at);
     }
   }
 });

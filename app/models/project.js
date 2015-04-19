@@ -8,7 +8,7 @@ let Project = DS.Model.extend({
   allow_anonymous:      DS.attr('boolean'),
   expires_at:           DS.attr('date'),
   ideas:                DS.hasMany('idea', {async: true}),
-  user:                 DS.belongsTo('user'),
+  user:                 DS.belongsTo('user')
 });
 
 Project.reopenClass({
