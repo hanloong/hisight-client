@@ -1,1 +1,16 @@
-{{outlet}}
+<div class='breadcrumbs grey-text'>
+  {{#link-to 'dashboard.index'}}
+    <i class='mdi-action-home'></i>
+    Home
+  {{/link-to}}
+  <i class='mdi-navigation-chevron-right'></i>
+  {{#link-to 'projects'}} Projects {{/link-to}}
+  <i class='mdi-navigation-chevron-right'></i>
+  {{#link-to 'projects.show' model.project}} {{model.project.name}} {{/link-to}}
+  <i class='mdi-navigation-chevron-right'></i>
+  New idea
+</div>
+
+<div class="row">
+  {{forms/idea-edit model=model save='createIdea' title='New idea'}}
+</div>

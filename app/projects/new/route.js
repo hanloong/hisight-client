@@ -11,8 +11,9 @@ export default Ember.Route.extend({
     return this.store.createRecord('project');
   },
   actions: {
-    createProject: function(newProject) {
-      newProject.save().then((project) => {
+    createProject: function(tempProject, expires_at) {
+      tempProject.set('expires_at', new Date(expires_at));
+      tempProject.save().then((project) => {
         this.transitionTo('projects.show', project);
       }).catch(function() {
       });
