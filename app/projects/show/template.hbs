@@ -25,23 +25,4 @@
   {{/each}}
 </div>
 
-<div class='action-float center'>
-  <ul>
-    <li class='tooltipped' data-position="left" data-tooltip='Edit {{model.project.name}}'>
-    {{#link-to 'projects.edit' model.project class='btn-floating btn waves-effect waves-light pink'}}
-      {{fa-icon 'edit'}}
-    {{/link-to}}
-    </li>
-    <li class='tooltipped' data-position="left" data-tooltip='Create new project'>
-    {{#link-to 'projects.new' class='btn-floating btn waves-effect waves-light amber'}}
-      {{fa-icon 'tasks'}}
-    {{/link-to}}
-    </li>
-    <li class='tooltipped' data-position="left" data-tooltip='Submit a new idea'>
-    {{#link-to 'projects.ideas.new' model class='btn-floating btn waves-effect waves-light green'}}
-      {{fa-icon 'lightbulb-o'}}
-    {{/link-to}}
-    </li>
-  </ul>
-  <a class="btn-floating btn-large waves-effect waves-light light-blue"><i class="mdi-content-add"></i></a>
-</div>
+{{float-action project=model}}
