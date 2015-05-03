@@ -4,6 +4,7 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'ithaka',
     environment: environment,
+    podModulePrefix: 'ithaka/pods',
     baseURL: '/',
     locationType: 'auto',
     EmberENV: {

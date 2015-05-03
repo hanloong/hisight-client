@@ -1,7 +1,11 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  didInsertElement: function() {
+  updateTooltip: function() {
     Ember.$('.tooltipped').tooltip({delay: 50});
+  }.observes('project', 'idea'),
+
+  didInsertElement: function() {
+    this.updateTooltip();
   }
 });

@@ -6,7 +6,7 @@
   <i class='mdi-navigation-chevron-right'></i>
   {{#link-to 'projects'}} Projects {{/link-to}}
   <i class='mdi-navigation-chevron-right'></i>
-  {{#link-to 'projects.show' model.project}} {{model.project.name}} {{/link-to}}
+  {{#link-to 'project.show' model.project}} {{model.project.name}} {{/link-to}}
   <i class='mdi-navigation-chevron-right'></i>
   {{model.name}}
 </div>
@@ -19,7 +19,7 @@
         <p>{{model.description}}</p>
       </div>
       <div class="card-action">
-        {{#link-to 'projects.ideas.edit' model}}Edit{{/link-to}}
+        {{#link-to 'idea.edit' model}}Edit{{/link-to}}
       </div>
     </div>
 
@@ -95,4 +95,3 @@
     </div>
   </div>
 </div>
-{{float-action project=model.project idea=idea}}
