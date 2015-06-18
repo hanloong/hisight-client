@@ -14,6 +14,7 @@ export default Router.map(function() {
     this.resource('project', {path: '/:project_id'}, function() {
       this.route('show', {path: ''});
       this.route('edit', {path: '/edit'});
+      this.route('factors', {path: '/factors'});
 
       this.resource('ideas', {path: '/ideas'}, function() {
         this.route('new');
