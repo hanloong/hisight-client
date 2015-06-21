@@ -7,7 +7,11 @@ var Area = DS.Model.extend({
   delete:       DS.attr('boolean', {defaultValue: false}),
 
   nameInputId: function() {
-    return 'area_name_' + this.get('id');
+    if (this.get('id')) {
+      return `area_name_${this.get('id')}`;
+    } else {
+      return `area_name_rand_${Math.floor(Math.random()*111)}`;
+    }
   }.property('id'),
 });
 

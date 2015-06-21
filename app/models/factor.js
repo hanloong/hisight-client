@@ -8,11 +8,19 @@ var Factor = DS.Model.extend({
   delete:       DS.attr('boolean', {defaultValue: false}),
 
   nameInputId: function() {
-    return 'factor_name_' + this.get('id');
+    if (this.get('id')) {
+      return `factor_name_${this.get('id')}`;
+    } else {
+      return `factor_name_rand_${Math.floor(Math.random()*999)}`;
+    }
   }.property('id'),
 
   negativeInputId: function() {
-    return 'factor_neg_' + this.get('id');
+    if (this.get('id')) {
+      return `factor_neg_${this.get('id')}`;
+    } else {
+      return `factor_neg_rand_${Math.floor(Math.random()*999)}`;
+    }
   }.property('id')
 });
 

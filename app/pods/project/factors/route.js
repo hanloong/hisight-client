@@ -2,17 +2,11 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   actions: {
-    newFactor: function(area) {
-      return this.store.createRecord('factor', {area: area});
-    },
-    destroyFactor: function(factor) {
-      factor.set('delete', true);
-    },
     newArea: function(project) {
       return this.store.createRecord('area', {project: project});
     },
-    destroyArea: function(area) {
-      area.set('delete', true);
+    newFactor: function(area) {
+      return this.store.createRecord('factor', {area: area});
     },
     save: function(model) {
       model.get('areas').forEach((area) => {
