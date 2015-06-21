@@ -5,6 +5,7 @@ var Factor = DS.Model.extend({
   weight:       DS.attr('number'),
   negative:     DS.attr('boolean'),
   area:         DS.belongsTo('area'),
+  delete:       DS.attr('boolean', {defaultValue: false}),
 
   nameInputId: function() {
     return 'factor_name_' + this.get('id');

@@ -5,27 +5,31 @@ export default Ember.Route.extend({
     newFactor: function(area) {
       return this.store.createRecord('factor', {area: area});
     },
-    updateFactor: function(factor) {
-      factor.save().then((model) => {
-      }).catch((errors) => {
-        console.log(errors);
-      });
-    },
     destroyFactor: function(factor) {
-      factor.destroyRecord();
+      factor.set('delete', true);
     },
     newArea: function(project) {
       return this.store.createRecord('area', {project: project});
     },
-    updateArea: function(area) {
-      area.save().then((model) => {
-        console.log('area update');
-      }).catch((errors) => {
-        console.log(errors);
-      });
-    },
     destroyArea: function(area) {
-      area.destroyRecord();
+      area.set('delete', true);
     },
+    save: function(model) {
+      model.get('areas').forEach((area) => {
+        if (area.get('delete')) {
+          area.destroyRecord();
+        } else {
+          area.save()
+        }
+        area.get('factors').forEach((factor) => {
+          if (factor.get('delete')) {
+            factor.destroyRecord();
+          } else {
+            factor.save()
+          }
+        });
+      });
+      this.transitionTo('project.edit', model);
+    }
   }
 });

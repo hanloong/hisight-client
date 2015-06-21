@@ -38,8 +38,16 @@
 
     </div>
     <div class="card-action">
-      <button type='submit' class='waves-effect waves-light btn text-white pink lighten-2'>Save</button>
-      <button {{action 'cancel'}} class='waves-effect waves-light btn text-white'>Close</button>
+      {{#if model.id}}
+        <button type='submit' class='waves-effect waves-light btn text-white pink lighten-2'>Save</button>
+        <button {{action 'cancel'}} class='waves-effect waves-light btn text-white'>Close</button>
+        {{#link-to 'project.factors' model class='waves-effect waves-light btn text-white blue lighten-2'}}
+          Modify factors
+        {{/link-to}}
+      {{else}}
+        <button type='submit' class='waves-effect waves-light btn text-white pink lighten-2'>Save and modify factors</button>
+        <button {{action 'cancel'}} class='waves-effect waves-light btn text-white'>Close</button>
+      {{/if}}
     </div>
   </div>
 </form>

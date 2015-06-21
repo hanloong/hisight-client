@@ -100,8 +100,8 @@ $button-color: color("grey", "darken-1");
   display: block;
   padding: 10px 20px;
   border-radius: 10px;
-  .heading {
-    font-size: 1.5em;
+  .heading, .heading input {
+    font-size: 130%;
     padding-left: 20px;
     label {
       margin-left: 20px;
@@ -113,4 +113,11 @@ $button-color: color("grey", "darken-1");
   padding: 20px 30px;
   margin: 0 10px;
   display: block;
+}
+
+a.btn.text-white {
+  color: white;
+  &:hover, &:active {
+    color: white;
+  }
 }
