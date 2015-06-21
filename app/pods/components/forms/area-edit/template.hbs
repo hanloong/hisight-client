@@ -1,60 +1,69 @@
 {{#unless area.delete}}
-  <div class='row sub-container grey lighten-4'>
-    <div class="heading input-field">
-      {{input id=area.nameInputId name='area-name' value=area.name}}
-      <label class='active' for={{area.nameInputId}}>
-        Area title
-      </label>
-    </div>
-    {{#each activeFactors as |factor|}}
-      <div class="col l6 s12">
-        <div class="card">
-          <div class="card-form">
+<div class='row sub-container grey lighten-4'>
+  <div class="heading input-field">
+    {{input id=area.nameInputId name='area-name' value=area.name}}
+    <label class='active' for={{area.nameInputId}}>
+      Area title
+    </label>
+  </div>
+  {{#each activeFactors as |factor|}}
+  <div class="col l6 s12">
+    <div class="card">
+      <div class="card-form">
 
-            <div class='row'>
-              <div class="input-field">
-                {{input id=factor.nameInputId name='name' value=factor.name}}
-                <label class='active' for={{factor.nameInputId}}>Factor</label>
-              </div>
+        <div class='row'>
+          <div class="input-field">
+            {{input id=factor.nameInputId name='name' value=factor.name}}
+            <label class='active' for={{factor.nameInputId}}>Influence factor title</label>
+          </div>
+        </div>
+
+        <div class='row'>
+          <p class="range-field">
+            <div class='center-align'>
+              <small class='grey-text'>Weighting</small>
             </div>
+            <input type="range" id="test5" min="0" max="100" />
+          </p>
+        </div>
 
-            <div class='row'>
-              <div class="switch">
-                <label>
-                  Positive
-                  {{input id=factor.negativeInputId type="checkbox" checked=factor.negative}}
-                  <span class="lever"></span>
-                  Negative
-                </label>
-              </div>
-            </div>
+        <div class='row center-align'>
+          <div class="switch">
+            <label>
+              Positive
+              {{input id=factor.negativeInputId type="checkbox" checked=factor.negative}}
+              <span class="lever"></span>
+              Negative
+            </label>
+          </div>
+        </div>
 
-          </div>
-          <div class="card-action">
-            <a href='#' {{action 'destroyFactor' factor}}>
-              <i class='mdi-action-delete'></i>
-              Delete
-            </a>
-          </div>
-        </div>
       </div>
-    {{else}}
-      <div class="col l6 s12">
-        <div class='card-form'>
-          <div class='center-align'>
-            <h4>This area is empty</h4>
-            <button {{action 'destroyArea' area}} class='waves-effect waves-light btn text-white lighten-2'><i class='mdi-action-delete right'></i>Delete it</button>
-          </div>
-        </div>
-      </div>
-    {{/each}}
-    <div class="col l6 s12">
-      <div class='card-form'>
-        <div class='center-align'>
-          <h4>Somethings still missing?</h4>
-          <button {{action 'newFactor' area}} class='waves-effect waves-light btn text-white pink lighten-2'>Create new factor</button>
-        </div>
+      <div class="card-action">
+        <a href='#' {{action 'destroyFactor' factor}}>
+          <i class='mdi-action-delete'></i>
+          Delete
+        </a>
       </div>
     </div>
   </div>
+  {{else}}
+  <div class="col l6 s12">
+    <div class='card-form'>
+      <div class='center-align'>
+        <h4>This area is empty</h4>
+        <button {{action 'destroyArea' area}} class='waves-effect waves-light btn text-white lighten-2'><i class='mdi-action-delete right'></i>Delete it</button>
+      </div>
+    </div>
+  </div>
+  {{/each}}
+  <div class="col l6 s12">
+    <div class='card-form'>
+      <div class='center-align'>
+        <h4>Somethings still missing?</h4>
+        <button {{action 'newFactor' area}} class='waves-effect waves-light btn text-white pink lighten-2'>Create new factor</button>
+      </div>
+    </div>
+  </div>
+</div>
 {{/unless}}
