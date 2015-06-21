@@ -7,12 +7,4 @@ let Model = DS.Model.extend({
   idea:                 DS.belongsTo('idea')
 });
 
-Model.reopenClass({
-  FIXTURES: [
-    {id: 1, comment: 'hey', idea_id: 1},
-    {id: 2, comment: 'how you doin', idea_id: 1},
-    {id: 3, comment: 'sorry you can\'t get through', idea_id: 1}
-  ]
-});
-
 export default Model;

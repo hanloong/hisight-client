@@ -6,10 +6,4 @@ var Area = DS.Model.extend({
   project:      DS.belongsTo('project')
 });
 
-Area.reopenClass({
-  FIXTURES: [
-    {id: 1, name: 'General', project_id: 1, factors: [1, 2, 3]}
-  ]
-});
-
 export default Area;

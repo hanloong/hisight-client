@@ -15,12 +15,4 @@ var Factor = DS.Model.extend({
   }.property('id')
 });
 
-Factor.reopenClass({
-  FIXTURES: [
-    {id: 1, name: 'Productivity', weight: 1.0, negative: false, area_id: 1},
-    {id: 2, name: 'Happiness', weight: 1.0, negative: false, area_id: 1},
-    {id: 3, name: 'Risk', weight: 1.0, negative: true, area_id: 1},
-  ]
-});
-
 export default Factor;

@@ -12,11 +12,4 @@ let Project = DS.Model.extend({
   areas:                DS.hasMany('area', {async: true}),
 });
 
-Project.reopenClass({
-  FIXTURES: [
-    {id: 1, name: 'Sandbox', description: 'This is a playground for stuff', ideas: [1, 2], areas: [1]},
-    {id: 2, name: 'Ithaka Public', description: 'A place to give feedback, make suggestions and help buid the new generation of ideation software.'},
-  ]
-});
-
 export default Project;

@@ -12,7 +12,7 @@ App = Ember.Application.extend({
   modulePrefix: config.modulePrefix,
   podModulePrefix: config.podModulePrefix,
   Resolver: Resolver,
-  ApplicationAdapter: DS.FixtureAdapter
+  ApplicationAdapter: DS.RESTAdpater
 });
 
 loadInitializers(App, config.modulePrefix);
