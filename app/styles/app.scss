@@ -95,3 +95,22 @@ $button-color: color("grey", "darken-1");
     color: color('pink', 'darken-2');
   }
 }
+
+.sub-container {
+  display: block;
+  padding: 10px 20px;
+  border-radius: 10px;
+  .heading {
+    font-size: 1.5em;
+    padding-left: 20px;
+    label {
+      margin-left: 20px;
+    }
+  }
+}
+
+.card-form {
+  padding: 20px 30px;
+  margin: 0 10px;
+  display: block;
+}

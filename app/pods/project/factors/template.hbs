@@ -1,43 +1,80 @@
 <div class='breadcrumbs grey-text'>
   {{#link-to 'dashboard.index'}}
-  <i class='mdi-action-home'></i>
-  Home
+    <i class='mdi-action-home'></i>
+    Home
   {{/link-to}}
   <i class='mdi-navigation-chevron-right'></i>
   {{#link-to 'projects'}} Projects {{/link-to}}
   <i class='mdi-navigation-chevron-right'></i>
-  {{#link-to 'project.show' model}} Projects {{/link-to}}
+  {{#link-to 'project.show' model}} {{model.name}} {{/link-to}}
   <i class='mdi-navigation-chevron-right'></i>
   Factors
 </div>
 
 <div class="row">
   {{#each model.areas as |area|}}
-  <div class="col l12">
-    <div class="card">
-      <div class="card-content">
-        <span class="card-title grey-text text-darken-4">{{area.name}}</span>
-        <ul class='collection'>
-          {{#each area.factors as |factor|}}
-            <li class='collection-item'>
-              <div class='row'>
-                <div class="input-field col l6">
-                  {{input id=factor.nameInputId name='name' value=factor.name}}
-                  <label class='active' for={{factor.nameInputId}}>Factor</label>
-                </div>
-                <div class="col l3">
-                  {{input id=factor.negativeInputId type="checkbox" checked=factor.negative}}
-                  <label class='active' for={{factor.negativeInputId}}>Negative?</label>
-                </div>
-              </div>
-            </li>
-          {{/each}}
-        </ul>
+  <div class='row sub-container grey lighten-4'>
+    <div class="heading input-field col s11">
+      {{input id=area.nameInputId name='area-name' value=area.name}}
+      <label class='active' for={{area.nameInputId}}>
+        Area title
+      </label>
+    </div>
+    <div class='col s1'>
+      <i {{action 'updateArea' area}} class='right small grey-text mdi-content-save'></i>
+    </div>
+    {{#each area.factors as |factor|}}
+    <div class="col s6">
+      <div class="card">
+        <div class="card-form">
+
+          <div class='row'>
+            <div class="input-field">
+              {{input id=factor.nameInputId name='name' value=factor.name}}
+              <label class='active' for={{factor.nameInputId}}>Factor</label>
+            </div>
+          </div>
+
+          <div class='row'>
+            <div class="switch">
+              <label>
+                Positive
+                {{input id=factor.negativeInputId type="checkbox" checked=factor.negative}}
+                <span class="lever"></span>
+                Negative
+              </label>
+            </div>
+          </div>
+
+        </div>
         <div class="card-action">
-          <button {{action 'newFactor' area}} class='waves-effect waves-light btn text-white pink lighten-2'>New Factor</button>
+          <button {{action 'updateFactor' factor}} class='waves-effect waves-light btn pink text-white lighten-2'>Save</button>
+          <button {{action 'destroyFactor' factor}} class='waves-effect waves-light btn text-white'><i class='mdi-action-delete right'></i>Delete</button>
+        </div>
+      </div>
+    </div>
+    {{else}}
+    <div class="col s6">
+      <div class='card-form'>
+        <div class='center-align'>
+          <h4>This area is empty</h4>
+          <button {{action 'destroyFactor' area}} class='waves-effect waves-light btn text-white lighten-2'><i class='mdi-action-delete right'></i>Delete it</button>
+        </div>
+      </div>
+    </div>
+    {{/each}}
+    <div class="col s6">
+      <div class='card-form'>
+        <div class='center-align'>
+          <h4>Somethings still missing?</h4>
+          <button {{action 'newFactor' area}} class='waves-effect waves-light btn text-white pink lighten-2'>Create new factor</button>
         </div>
       </div>
     </div>
   </div>
   {{/each}}
+
+  <div class='row sub-container grey lighten-4'>
+    <button {{action 'newArea' model}} class='waves-effect waves-light btn text-white pink lighten-2'>Create new area</button>
+  </div>
 </div>
