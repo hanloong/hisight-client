@@ -29,15 +29,10 @@ $button-color: color("grey", "darken-1");
   margin: 0;
 }
 
-nav {
+.side-nav {
   .search-form {
-    display: inline;
-  }
-}
-
-#search-modal.modal {
-  @media #{$medium-and-down} {
-   width: 90%;
+    display: block;
+    margin: 10px;
   }
 }
 
