@@ -4,10 +4,13 @@ export default Ember.Route.extend({
   actions: {
     updateIdea: function(tempIdea) {
       tempIdea.save().then((idea) => {
-        this.transitionTo('projects.ideas.show', idea.get('project'), idea);
+        this.transitionTo('idea.show', idea);
       }).catch(function(errors) {
         console.log(errors);
       });
+    },
+    cancel: function(idea) {
+      this.transitionTo('idea.show', idea);
     }
   }
 });

@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
+  project: null,
   deactivate: function() {
     var idea = this.controller.get('model');
     if (idea.get('isNew')) {
@@ -8,7 +9,8 @@ export default Ember.Route.extend({
     }
   },
   model: function() {
-    var project = this.modelFor('projects.ideas');
+    var project = this.modelFor('ideas');
+    this.set('project', project);
     return this.store.createRecord('idea', {
       project: project
     });
@@ -16,10 +18,13 @@ export default Ember.Route.extend({
   actions: {
     createIdea: function(tempIdea) {
       tempIdea.save().then((idea) => {
-        this.transitionTo('projects.ideas.show', idea.get('project'), idea);
+        this.transitionTo('idea.show', idea);
       }).catch(function(errors) {
         console.log(errors);
       });
+    },
+    cancel: function(idea) {
+      this.transitionTo('project.show', this.modelFor('ideas'));
     }
   }
 });

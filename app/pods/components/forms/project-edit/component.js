@@ -22,6 +22,10 @@ export default Ember.Component.extend({
     save: function() {
       var expires_at = this.$('input[name="expires_at"]').val();
       this.sendAction('save', this.get('model'), expires_at);
+    },
+    cancel: function() {
+      this.get('model').rollbackAttributes();
+      this.sendAction('cancel', this.get('model'));
     }
   }
 });
