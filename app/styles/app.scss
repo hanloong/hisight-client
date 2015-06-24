@@ -25,21 +25,19 @@ $button-color: color("grey", "darken-1");
   padding: 0;
   .search-nav {
     background: white;
-    .input-field label i {
-      color: lightgray;
+    .input-field {
+      label i {
+        color: lightgray;
+      }
+      input {
+        color: black;
+      }
     }
   }
 }
 
 .side-nav ul {
   margin: 0;
-}
-
-.side-nav {
-  .search-form {
-    display: block;
-    margin: 10px;
-  }
 }
 
 .breadcrumbs {
@@ -109,6 +107,7 @@ $button-color: color("grey", "darken-1");
   .heading, .heading input {
     font-size: 130%;
     padding-left: 20px;
+    margin-right: 40px;
     label {
       margin-left: 20px;
     }
