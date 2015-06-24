@@ -13,13 +13,13 @@ export default Ember.Route.extend({
         if (area.get('delete')) {
           area.destroyRecord();
         } else {
-          area.save()
+          area.save();
         }
         area.get('factors').forEach((factor) => {
           if (factor.get('delete')) {
             factor.destroyRecord();
           } else {
-            factor.save()
+            factor.save();
           }
         });
       });
