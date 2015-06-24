@@ -23,6 +23,12 @@ $button-color: color("grey", "darken-1");
 
 .container {
   padding: 0;
+  .search-nav {
+    background: white;
+    .input-field label i {
+      color: lightgray;
+    }
+  }
 }
 
 .side-nav ul {
