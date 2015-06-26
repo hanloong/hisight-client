@@ -1,7 +1,7 @@
 {
-  "name": "ithaka",
+  "name": "insight",
   "version": "0.0.0",
-  "description": "Small description for ithaka goes here",
+  "description": "Small description for insight goes here",
   "private": true,
   "directories": {
     "doc": "doc",

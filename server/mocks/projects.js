@@ -3,7 +3,7 @@ module.exports = function(app) {
   var projectsRouter = express.Router();
   var mockProjects = [
     {id: 1, name: 'Sandbox', description: 'This is a playground for stuff', ideas: [1, 2], areas: [1]},
-    {id: 2, name: 'Ithaka Public', description: 'A place to give feedback, make suggestions and help buid the new generation of ideation software.'},
+    {id: 2, name: 'insight Public', description: 'A place to give feedback, make suggestions and help buid the new generation of ideation software.'},
   ];
 
   projectsRouter.get('/', function(req, res) {
