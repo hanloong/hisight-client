@@ -71,26 +71,9 @@
     <div class="card">
       <div class="card-content">
         <h5 class="grey-text center-align text-darken-4">Influence</h5>
-        <form ction="#">
-          <p class="range-field">
-            <div class='center-align'>
-              <small class='grey-text'>Price</small>
-            </div>
-            <input type="range" id="test5" min="0" max="100" />
-          </p>
-          <p class="range-field">
-            <div class='center-align'>
-              <small class='grey-text'>Complexity</small>
-            </div>
-            <input type="range" id="test5" min="0" max="100" />
-          </p>
-          <p class="range-field">
-            <div class='center-align'>
-              <small class='grey-text'>revenue</small>
-            </div>
-            <input type="range" id="test5" min="0" max="100" />
-          </p>
-        </form>
+        {{#each model.ratings as |rating|}}
+          {{field/mdi-range title=rating.factor.name negative=rating.factor.negative value=rating.value}}
+        {{/each}}
       </div>
     </div>
 
@@ -98,26 +81,14 @@
       <div class="card-content">
         <h5 class="grey-text center-align text-darken-4">Influence</h5>
 
-        <div class='center-align'>
-          <small class='grey-text'>revenue</small>
-        </div>
-        <div class="progress">
-          <div class="determinate" style="width: 70%"></div>
-        </div>
-
-        <div class='center-align'>
-          <small class='grey-text'>revenue</small>
-        </div>
-        <div class="progress">
-          <div class="determinate" style="width: 70%"></div>
-        </div>
-
-        <div class='center-align'>
-          <small class='grey-text'>revenue</small>
-        </div>
-        <div class="progress">
-          <div class="determinate" style="width: 70%"></div>
-        </div>
+        {{#each model.ratings as |rating|}}
+          <div class='center-align'>
+            <small class='grey-text'>{{rating.factor.name}}</small>
+          </div>
+          <div class="progress negative">
+            <div class="determinate" style="width: {{rating.value}}%"></div>
+          </div>
+        {{/each}}
       </div>
     </div>
 

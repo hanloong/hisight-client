@@ -9,7 +9,8 @@ let Idea = DS.Model.extend({
   comments_count:       DS.attr('number'),
   project:              DS.belongsTo('project'),
   user:                 DS.belongsTo('user'),
-  comments:             DS.hasMany('comment', {async: true})
+  comments:             DS.hasMany('comment', {async: true}),
+  ratings:              DS.hasMany('rating', {async: true})
 });
 
 export default Idea;

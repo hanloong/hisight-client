@@ -13,7 +13,7 @@ $brand-default: $brand-pink;
 $brand-info: $brand-blue;
 $brand-success: $brand-green;
 $brand-warn: $brand-orange;
-$brand-alert: red;
+$brand-alert: color('red', 'darken-2');
 $brand-disabled: $brand-light-gray;
 
 html body {

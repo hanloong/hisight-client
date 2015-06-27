@@ -40,6 +40,30 @@ html .card .card-action a {
   &.btn { color: white; }
 }
 
+// Progress
+$progress-bar-color: $brand-info;
+
+.negative.progress {
+  background-color: lighten($brand-alert, 40%);
+  .determinate {
+    background-color: $brand-alert;
+  }
+  .indeterminate {
+    background-color: $brand-alert;
+  }
+}
+
+// Range
+.negative input[type=range] + .thumb {
+  background-color: $brand-alert;
+  .value {
+    color: white;
+  }
+}
+.negative input[type=range]::-webkit-slider-thumb {
+  background-color: $brand-alert;
+}
+
 // components
 @import "components/global";
 @import "components/icons-material-design";

@@ -2,7 +2,7 @@ module.exports = function(app) {
   var express = require('express');
   var ideasRouter = express.Router();
   var mockIdeas = [
-    {id: 1, name: 'Great Idea', project: 1, comments: [1, 2, 3]},
+    {id: 1, name: 'Great Idea', project: 1, comments: [1, 2, 3], ratings: [1, 2, 3]},
     {id: 2, name: 'Another Great Idea', project: 1}
   ]
 
