@@ -16,9 +16,9 @@
     {{forms/area-edit area=area newFactor='newFactor'}}
   {{/each}}
 
-  <div class='row sub-container grey lighten-4'>
-    <button {{action 'save' model}} class='waves-effect waves-light btn text-white pink lighten-2'>Save changes</button>
-    {{#link-to 'project.edit' model class='waves-effect waves-light btn text-white lighten-2'}}Back{{/link-to}}
-    <button {{action 'newArea' model}} class='waves-effect waves-light btn text-white blue lighten-2'>Create new area</button>
+  <div class='row sub-container grey lighten-4 card-action'>
+    <button {{action 'save' model}} class='btn default col s12 l3'>Save changes</button>
+    {{#link-to 'project.edit' model class='btn dark col s12 l3'}}Back{{/link-to}}
+    <button {{action 'newArea' model}} class='btn info col s12 l3'>Create new area</button>
   </div>
 </div>

@@ -29,9 +29,6 @@
       {{#if model.id}}
         <button type='submit' class='btn default col s12 l2'>Save</button>
         <button {{action 'cancel'}} class='dark btn col s12 l2'>Close</button>
-        {{#link-to 'project.factors' model class='btn info col s12 l4'}}
-          Modify factors
-        {{/link-to}}
       {{else}}
         <button type='submit' class='btn default col s12 l4'>Save and modify factors</button>
         <button {{action 'cancel'}} class='btn dark col s12 l2'>Close</button>
@@ -40,25 +37,30 @@
   </div>
 </form>
 <div class='col s12 l4'>
-  <div class="card-panel">
-    <div class='card-form'>
-      <div class='row'>
-        <div class='input-field col s12'>
-          {{#field/mdi-switch field=model.anonymity}}
-            Anonymity
-          {{/field/mdi-switch}}
-        </div>
-      </div>
+  <div class="card">
+    <div class='card-content'>
+      <h5 class="grey-text center-align text-darken-4">Settings</h5>
 
       <div class='row'>
         <div class='input-field col s12'>
-          {{#field/mdi-switch field=model.voting}}
-            Enable voting
-          {{/field/mdi-switch}}
+          {{field/mdi-switch onStateTitle='Anonymity' value=model.anonymity}}
         </div>
       </div>
-
+      <div class='row'>
+        <div class='input-field col s12'>
+          {{field/mdi-switch onStateTitle='Voting' value=model.voting}}
+        </div>
+      </div>
     </div>
+
+    <div class="card-action">
+      {{#if model.id}}
+        {{#link-to 'project.factors' model class='btn info col s12'}}
+          Modify factors
+        {{/link-to}}
+      {{/if}}
+    </div>
+
   </div>
 </div>
 {{yield}}

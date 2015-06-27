@@ -82,12 +82,7 @@
         <h5 class="grey-text center-align text-darken-4">Influence</h5>
 
         {{#each model.ratings as |rating|}}
-          <div class='center-align'>
-            <small class='grey-text'>{{rating.factor.name}}</small>
-          </div>
-          <div class="progress negative">
-            <div class="determinate" style="width: {{rating.value}}%"></div>
-          </div>
+          {{field/mdi-progress title=rating.factor.name negative=rating.factor.negative value=rating.value}}
         {{/each}}
       </div>
     </div>

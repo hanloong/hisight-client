@@ -19,25 +19,11 @@
         </div>
 
         <div class='row'>
-          <p class="range-field">
-            <div class='center-align'>
-              <small class='grey-text'>
-                Weighting {{factor.weight}}/100
-              </small>
-            </div>
-            <input type="range" id="test5" min="0" max="100" value={{factor.weight}} />
-          </p>
+          {{field/mdi-range title='Weighting' showValue=true value=factor.weight negative=factor.negative}}
         </div>
 
         <div class='row center-align'>
-          <div class="switch">
-            <label>
-              Positive
-              {{input id=factor.negativeInputId type="checkbox" checked=factor.negative}}
-              <span class="lever"></span>
-              Negative
-            </label>
-          </div>
+          {{field/mdi-switch offStateTitle='Positive' onStateTitle='Negative' value=factor.negative}}
         </div>
 
       </div>
@@ -59,6 +45,7 @@
     </div>
   </div>
   {{/each}}
+
   <div class="col l6 s12">
     <div class='card-form'>
       <div class='center-align'>
@@ -67,5 +54,6 @@
       </div>
     </div>
   </div>
+
 </div>
 {{/unless}}
