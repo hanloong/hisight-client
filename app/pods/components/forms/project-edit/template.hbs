@@ -1,4 +1,4 @@
-<form class="col s12" {{action 'save' on='submit'}}>
+<form class="col s12 l8 offset-l2" {{action 'save' on='submit'}}>
   <div class="card">
     <div class="card-content">
       <span class="card-title grey-text text-darken-4">{{title}}</span>
@@ -25,7 +25,7 @@
       </div>
 
       <div class='row'>
-        <div class='col s12'>
+        <div class='input-field col s12'>
           <div class="switch">
             <label>
               {{input type="checkbox" checked=model.allow_anonymous}}
@@ -39,14 +39,14 @@
     </div>
     <div class="card-action">
       {{#if model.id}}
-        <button type='submit' class='waves-effect waves-light btn text-white pink lighten-2'>Save</button>
-        <button {{action 'cancel'}} class='waves-effect waves-light btn text-white'>Close</button>
-        {{#link-to 'project.factors' model class='waves-effect waves-light btn text-white blue lighten-2'}}
+        <button type='submit' class='btn default col s12 l2'>Save</button>
+        <button {{action 'cancel'}} class='dark btn col s12 l2'>Close</button>
+        {{#link-to 'project.factors' model class='btn info col s12 l4'}}
           Modify factors
         {{/link-to}}
       {{else}}
-        <button type='submit' class='waves-effect waves-light btn text-white pink lighten-2'>Save and modify factors</button>
-        <button {{action 'cancel'}} class='waves-effect waves-light btn text-white'>Close</button>
+        <button type='submit' class='btn default col s12 l4'>Save and modify factors</button>
+        <button {{action 'cancel'}} class='btn dark col s12 l2'>Close</button>
       {{/if}}
     </div>
   </div>

@@ -2,21 +2,21 @@
   <ul>
     {{#if project.id}}
       <li class='tooltipped' data-position="left" data-tooltip='Edit {{project.name}}'>
-      {{#link-to 'project.edit' project class='btn-floating btn waves-effect waves-light pink'}}
+      {{#link-to 'project.edit' project class='btn-floating btn waves-effect waves-light default'}}
         {{fa-icon 'edit'}}
       {{/link-to}}
       </li>
       <li class='tooltipped' data-position="left" data-tooltip='Submit a new idea'>
-      {{#link-to 'ideas.new' project class='btn-floating btn waves-effect waves-light green'}}
+      {{#link-to 'ideas.new' project class='btn-floating btn waves-effect waves-light success'}}
         {{fa-icon 'lightbulb-o'}}
       {{/link-to}}
       </li>
     {{/if}}
     <li class='tooltipped' data-position="left" data-tooltip='Create new project'>
-    {{#link-to 'projects.new' class='btn-floating btn waves-effect waves-light amber'}}
+    {{#link-to 'projects.new' class='btn-floating btn waves-effect waves-light warn'}}
       {{fa-icon 'tasks'}}
     {{/link-to}}
     </li>
   </ul>
-  <a class="btn-floating btn-large waves-effect waves-light light-blue"><i class="mdi-content-add"></i></a>
+  <a class="btn-floating btn-large waves-effect waves-light info"><i class="mdi-content-add"></i></a>
 </div>

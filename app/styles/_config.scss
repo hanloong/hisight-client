@@ -12,11 +12,33 @@
 @import "components/normalize";
 
 // Customisation
-$primary-color: color("pink", "lighten-2");
-$radio-fill-color: color("light-blue", "darken-2");
+@import 'colours';
+$primary-color: $brand-dark;
+$secondary-color: $brand-default;
+$radio-fill-color: $brand-info;
 $input-focus-color: $primary-color;
-$button-color: color("grey", "darken-1");
+$button-color: $brand-dark;
+$link-color: $brand-info;
+$radio-fill-color: $brand-info;
 
+// Switches
+$switch-bg-color: $secondary-color;
+$switch-checked-lever-bg: desaturate(lighten($secondary-color, 25%), 25%);
+
+// Date picker
+$datepicker-date-bg: $secondary-color;
+
+// Navbar
+html nav {box-shadow: none;}
+
+// Card
+html .card .card-action a {
+  color: $brand-default;
+  &:hover, &:focus {
+    color: darken($brand-default, 20%);
+  }
+  &.btn { color: white; }
+}
 
 // components
 @import "components/global";
@@ -27,6 +49,7 @@ $button-color: color("grey", "darken-1");
 @import "components/typography";
 @import "components/cards";
 @import "components/toast";
+@import "components/tabs";
 @import "components/tooltip";
 @import "components/buttons";
 @import "components/dropdown";
@@ -34,9 +57,14 @@ $button-color: color("grey", "darken-1");
 @import "components/modal";
 @import "components/collapsible";
 @import "components/materialbox";
+@import "components/form";
+@import "components/table_of_contents";
 @import "components/sideNav";
 @import "components/preloader";
 @import "components/slider";
+@import "components/date_picker/default.scss";
+@import "components/date_picker/default.date.scss";
+@import "components/date_picker/default.time.scss";
 
 /* FIXME: Workaround for https://github.com/Dogfalo/materialize/issues/1079 */
 @each $mdi-icon-name, $mdi-icon-value in $mdi-list-icons {
