@@ -1,6 +1,6 @@
-<form class="col s12 l8 offset-l2" {{action 'save' on='submit'}}>
+<form class="col s12 l8" {{action 'save' on='submit'}}>
   <div class="card">
-    <div class="card-content">
+    <div class="card-form">
       <span class="card-title grey-text text-darken-4">{{title}}</span>
 
       <div class="row">
@@ -24,18 +24,6 @@
         </div>
       </div>
 
-      <div class='row'>
-        <div class='input-field col s12'>
-          <div class="switch">
-            <label>
-              {{input type="checkbox" checked=model.allow_anonymous}}
-              <span class="lever"></span>
-              Allow anonymous posts and comments
-            </label>
-          </div>
-        </div>
-      </div>
-
     </div>
     <div class="card-action">
       {{#if model.id}}
@@ -51,4 +39,26 @@
     </div>
   </div>
 </form>
+<div class='col s12 l4'>
+  <div class="card-panel">
+    <div class='card-form'>
+      <div class='row'>
+        <div class='input-field col s12'>
+          {{#field/mdi-switch field=model.anonymity}}
+            Anonymity
+          {{/field/mdi-switch}}
+        </div>
+      </div>
+
+      <div class='row'>
+        <div class='input-field col s12'>
+          {{#field/mdi-switch field=model.voting}}
+            Enable voting
+          {{/field/mdi-switch}}
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
 {{yield}}
