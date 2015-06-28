@@ -19,6 +19,7 @@ export default Ember.Route.extend({
       });
     },
     cancel: function(project) {
+      console.log(project);
       this.transitionTo('projects');
     }
   }

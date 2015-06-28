@@ -30,7 +30,7 @@
         Comments
         </h5>
       </li>
-      {{#each comment in model.comments}}
+      {{#each model.comments as |comment|}}
       <li class='collection-item avatar'>
         <i class='mdi-social-person circle grey lighten-2'></i>
         <span class="title">Title</span>

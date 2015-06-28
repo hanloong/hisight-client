@@ -5,6 +5,6 @@ export default Ember.Component.extend({
   classNames: ['range-field'],
   classNameBindings: ['isNegative:negative'],
   isNegative: function() {
-    return this.get('negative')
+    return this.get('negative');
   }.property('negative')
 });

@@ -24,6 +24,7 @@ export default Ember.Route.extend({
       });
     },
     cancel: function(idea) {
+      console.log(idea);
       this.transitionTo('project.show', this.modelFor('ideas'));
     }
   }
