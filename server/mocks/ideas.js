@@ -23,6 +23,7 @@ module.exports = function(app) {
   });
 
   ideasRouter.put('/:id', function(req, res) {
+    console.log(req);
     res.send({
       'ideas': mockIdeas[req.params.id -1]
     });

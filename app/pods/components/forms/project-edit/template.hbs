@@ -25,6 +25,7 @@
       </div>
 
     </div>
+
     <div class="card-action">
       {{#if model.id}}
         <button type='submit' class='btn default col s12 l2'>Save</button>
@@ -34,8 +35,10 @@
         <button {{action 'cancel'}} class='btn dark col s12 l2'>Close</button>
       {{/if}}
     </div>
+
   </div>
 </form>
+
 <div class='col s12 l4'>
   <div class="card">
     <div class='card-content'>
@@ -46,11 +49,13 @@
           {{field/mdi-switch onStateTitle='Anonymity' value=model.anonymity}}
         </div>
       </div>
+
       <div class='row'>
         <div class='input-field col s12'>
           {{field/mdi-switch onStateTitle='Voting' value=model.voting}}
         </div>
       </div>
+
     </div>
 
     <div class="card-action">
