@@ -6,21 +6,21 @@
       <div class="row">
         <div class="input-field col s12">
           {{input id='name' name='name' value=model.name}}
-          <label class="{{isNew 'active'" for="name">Project name</label>
+          <label class="{{if isNew 'active'}}" for="name">Project name</label>
         </div>
       </div>
 
       <div class="row">
         <div class="input-field col s12">
           {{textarea id='description' class="materialize-textarea" name='description' value=model.description}}
-          <label class="{{isNew 'active'}}" for="description">Description</label>
+          <label class="{{if isNew 'active'}}" for="description">Description</label>
         </div>
       </div>
 
       <div class="row">
         <div class="input-field col s12">
           <input type="date" name='expires_at' id='deadline' class='datepicker' value="{{moment model.expires_at 'YYYY/MM/DD'}}" />
-          <label class="{{isNew 'active'}}" for="deadline">Deadline</label>
+          <label class="{{if isNew 'active'}}" for="deadline">Deadline</label>
         </div>
       </div>
 
