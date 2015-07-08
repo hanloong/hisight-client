@@ -1,0 +1,70 @@
+$brand-gray: #444444
+$brand-pink: #ea4c89
+$brand-green: #8aba56
+$brand-orange: #ff8833
+$brand-blue: #00b6e3
+$brand-light-gray: #9ba5a8
+
+$brand-dark: $brand-gray
+$brand-default: $brand-pink
+$brand-info: $brand-blue
+$brand-success: $brand-green
+$brand-warn: $brand-orange
+$brand-alert: red 
+$brand-disabled: $brand-light-gray
+
+html body
+
+  .dark
+    background: $brand-dark
+    color: white
+    &:active, &:hover
+      background: darken($brand-dark, 10%)
+
+  .dark-text
+    color: $brand-dark
+
+  .default, .pink
+    background: $brand-default
+    color: white
+    &:active, &:hover
+      background: darken($brand-default, 10%)
+
+  .default-text
+    color: $brand-default
+
+  .info
+    background: $brand-info
+    color: white
+    &:active, &:hover
+      background: darken($brand-info, 10%)
+
+  .info-text
+    color: $brand-info
+
+  .warn
+    background: $brand-warn
+    color: white
+    &:active, &:hover
+      background: darken($brand-warn, 10%)
+
+  .warn-text
+    color: $brand-warn
+
+  .success
+    background: $brand-success
+    color: white
+    &:active, &:hover
+      background: darken($brand-success, 10%)
+
+  .success-text
+    color: $brand-success
+
+  .alert
+    background: $brand-alert
+    color: white
+    &:active, &:hover
+      background: darken($brand-alert, 10%)
+
+  .alert-text
+    color: $brand-alert

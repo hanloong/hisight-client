@@ -5,20 +5,12 @@ var Funnel = require('broccoli-funnel');
 
 var app = new EmberApp({
   sassOptions: {
-    includePaths: ['bower_components/materialize/sass']
+    includePaths: ['bower_components/material-design-lite'],
+    extension: ['sass']
   }
 });
 
-app.import('bower_components/materialize/bin/materialize.js');
-app.import('bower_components/materialize/bin/materialize.js', {
-  destDir: 'fonts'
-});
-
-var extraAssets = new Funnel('bower_components/materialize/font', {
-    srcDir: '/',
-    include: ['**/*.woff*'],
-    destDir: '/font'
- });
+app.import('bower_components/material-design-lite/material.min.js');
 
 // Use `app.import` to add additional libraries to the generated
 // output files.
@@ -33,4 +25,4 @@ var extraAssets = new Funnel('bower_components/materialize/font', {
 // please specify an object with the list of modules as keys
 // along with the exports of each module as its value.
 
-module.exports = app.toTree(extraAssets);
+module.exports = app.toTree();

@@ -1,31 +1,32 @@
-<div id="slide-out" class="side-nav">
-  <div class='grey-text text-lighten-5 user-profile blue-grey darken-3'>
-    <img class='circle responsive-img' src='https://avatars1.githubusercontent.com/u/195477?v=3&s=460' width='60' height='60'/>
+<header>
+  <div class='user-profile'>
+    <img class='avatar' src='https://avatars1.githubusercontent.com/u/195477?v=3&s=460' width='60' height='60'/>
     <h6>Han Loong Liauw</h6>
     <small>Software Engineer</small>
     <div class='settings'>
-      <a href='#'><i class='small mdi-action-settings'></i></a>
+      <a href='#'><i class='material-icons'>settings</i></a>
     </div>
   </div>
-  <ul>
-    <li>{{#link-to 'projects'}}Projects{{/link-to}}</li>
-    <li>{{#link-to 'projects.new'}}Create project{{/link-to}}</li>
-  </ul>
-
-  <div class='scoreboard'>
-    <div class='row'>
-      <div class='score info col s12 center-align'>
-        <h3>6</h3>
-        <small>votes left</small>
-      </div>
-      <div class='score success col s6 center-align'>
-        <h5>6</h5>
-        <small>unlocked</small>
-      </div>
-      <div class='score default col s6 center-align'>
-        <h5>6</h5>
-        <small>used</small>
-      </div>
-    </div>
+</header>
+<nav class='mdl-navigation mdl-color--grey-800'>
+  {{#link-to 'dashboard.index' class='mdl-navigation__link'}}
+    <i class="mdl-color-text--grey-300 material-icons">home</i> Home
+  {{/link-to}}
+  {{#link-to 'projects' class='mdl-navigation__link'}}
+    <i class="mdl-color-text--grey-300 material-icons">home</i> Projects
+  {{/link-to}}
+</nav>
+<div class='scoreboard'>
+  <div class='score info'>
+    <h3>6</h3>
+    <small>votes left</small>
+  </div>
+  <div class='small-score success'>
+    <h5>6</h5>
+    <small>unlocked</small>
+  </div>
+  <div class='small-score default'>
+    <h5>6</h5>
+    <small>used</small>
   </div>
 </div>
