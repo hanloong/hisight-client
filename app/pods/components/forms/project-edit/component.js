@@ -10,10 +10,6 @@ export default Ember.Component.extend({
     var picker = input.pickadate('picker');
     picker.set('select', new Date(this.get('expiresAt')));
   },
-  isNew: function() {
-    var model = this.get('model');
-    return model.get('isNew');
-  }.property('model'),
   expiresAt: function() {
     var model = this.get('model');
     return model.get('expires_at');

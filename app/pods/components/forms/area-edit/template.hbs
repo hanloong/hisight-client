@@ -1,9 +1,9 @@
 {{#unless area.delete}}
 <div class='row sub-container grey lighten-4'>
   <div class="heading input-field">
-    {{input id=area.nameInputId name='area-name' value=area.name}}
+    {{input id=area.nameInputId name='area-name' value=area.name placeholder='E.g. Finance/Sales'}}
     <label class='active' for={{area.nameInputId}}>
-      Area title
+      Area name
     </label>
   </div>
   {{#each activeFactors as |factor|}}
@@ -13,7 +13,7 @@
 
         <div class='row'>
           <div class="input-field">
-            {{input id=factor.nameInputId name='name' value=factor.name}}
+            {{input id=factor.nameInputId name='name' value=factor.name placeholder='E.g. Complexity/Productivy Gains/Revenue'}}
             <label class='active' for={{factor.nameInputId}}>Influence factor title</label>
           </div>
         </div>

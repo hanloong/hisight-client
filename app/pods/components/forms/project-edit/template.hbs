@@ -5,15 +5,15 @@
 
       <div class="row">
         <div class="input-field col s12">
-          {{input id='name' name='name' value=model.name}}
-          <label class="{{if isNew 'active'}}" for="name">Project name</label>
+          {{input id='name' name='name' placeholder='Enter the projects name' value=model.name}}
+          <label class="active" for="name">Name</label>
         </div>
       </div>
 
       <div class="row">
         <div class="input-field col s12">
-          {{textarea id='description' class="materialize-textarea" name='description' value=model.description}}
-          <label class="{{if isNew 'active'}}" for="description">Description</label>
+          {{textarea id='description' class="materialize-textarea" name='description' placeholder='Give an introduction to what this project is about.' value=model.description}}
+          <label class="active" for="description">Description</label>
         </div>
       </div>
 

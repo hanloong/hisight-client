@@ -15,7 +15,7 @@
   <div class="col s12 m8 l9">
     <div class="card">
       <div class="card-content">
-        <span class="card-title grey-text text-darken-4">{{model.name}}</span>
+        <span class="card-title">{{model.name}}</span>
         {{text-blob value=model.description}}
       </div>
       <div class="card-action">
@@ -38,6 +38,21 @@
       </li>
       {{/each}}
     </ul>
+
+    <div class="card">
+      <div class="card-content">
+        <span class="card-title">Add your two cents</span>
+        {{textarea name='new-comment' class='materialize-textarea' placeholder='Type somthing'}}
+        <small>Some info about commenting</small>
+      </div>
+      <div class="card-action">
+        <a href='#' class='btn info' {{action 'submitComment'}}>
+          <i class='mdi-action-question-answer left'></i>
+          Add comment
+        </a>
+      </div>
+    </div>
+
   </div>
 
   <div class="col s12 m4 l3">
@@ -59,10 +74,10 @@
         <br/>
         <div class="row center-align">
           <div class='col s6'>
-            <a class="btn-floating btn-large waves-effect waves-light info"><i class="mdi-navigation-check"></i></a>
+            <a class="btn-floating btn-large waves-effect waves-light success"><i class="mdi-navigation-check"></i></a>
           </div>
           <div class='col s6'>
-            <a class="btn-floating btn-large waves-effect waves-light default"><i class="mdi-action-bookmark"></i></a>
+            <a class="btn-floating btn-large waves-effect waves-light info"><i class="mdi-action-bookmark"></i></a>
           </div>
         </div>
       </div>
@@ -80,7 +95,6 @@
     <div class="card">
       <div class="card-content">
         <h5 class="grey-text center-align text-darken-4">Influence</h5>
-
         {{#each model.ratings as |rating|}}
           {{field/mdi-progress title=rating.factor.name negative=rating.factor.negative value=rating.value}}
         {{/each}}
