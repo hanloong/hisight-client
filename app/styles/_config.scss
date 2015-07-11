@@ -29,7 +29,43 @@ $switch-checked-lever-bg: desaturate(lighten($secondary-color, 25%), 25%);
 $datepicker-date-bg: $secondary-color;
 
 // Navbar
-html nav {box-shadow: none;}
+html header nav {
+  background: white;
+  color: $brand-dark;
+  i, a, .brand-logo {
+    color: $brand-dark;
+  }
+}
+
+// Side-Nav - Fixed
+
+html header .side-nav.fixed {
+  background: $brand-dark;
+  color: white;
+  ul li {
+    a {
+      color: white;
+    }
+    background: lighten($brand-dark, 10%);
+    &:hover {
+      color: $brand-dark;
+      background: lighten($brand-dark, 50%);
+      a {
+        color: $brand-dark;
+      }
+    }
+  }
+}
+
+header, main, footer {
+  padding-left: 240px;
+}
+
+@media only screen and (max-width : 992px) {
+  header, main, footer {
+    padding-left: 0;
+  }
+}
 
 // Card
 html .card .card-action a {
