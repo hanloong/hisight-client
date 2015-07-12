@@ -3,7 +3,7 @@ module.exports = function(app) {
   var faker = require('Faker');
   var ideasRouter = express.Router();
   var mockIdeas = [
-    {id: 1, name: 'Great Idea', project: 1, description: faker.Lorem.paragraphs(), comments: [1, 2, 3], ratings: [1, 2, 3]},
+    {id: 1, name: 'Great Idea', project: 1, description: faker.Lorem.paragraphs(), comments: [1, 2, 3], ratings: [1, 2, 3, 4, 5]},
     {id: 2, name: 'Another Great Idea', project: 1}
   ]
 

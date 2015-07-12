@@ -2,7 +2,8 @@ module.exports = function(app) {
   var express = require('express');
   var areasRouter = express.Router();
   var mockAreas = [
-    {id: 1, name: 'General', project_id: 1, factors: [1, 2, 3]}
+    {id: 1, name: 'General', project_id: 1, factors: [1, 2, 3]},
+    {id: 2, name: 'Finance', project_id: 1, factors: [4, 5]}
   ]
 
   areasRouter.get('/', function(req, res) {

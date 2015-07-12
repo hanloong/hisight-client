@@ -4,7 +4,7 @@ var Factor = DS.Model.extend({
   name:         DS.attr('string'),
   weight:       DS.attr('number', {defaultValue: 50}),
   negative:     DS.attr('boolean'),
-  area:         DS.belongsTo('area'),
+  area:         DS.belongsTo('area', {async: true}),
   delete:       DS.attr('boolean', {defaultValue: false}),
 
   nameInputId: function() {
@@ -21,7 +21,11 @@ var Factor = DS.Model.extend({
     } else {
       return `factor_neg_rand_${Math.floor(Math.random()*999)}`;
     }
-  }.property('id')
+  }.property('id'),
+
+  areaName: function() {
+    return this.get('area.name');
+  }.property('area_id', 'area')
 });
 
 export default Factor;

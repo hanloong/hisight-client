@@ -6,20 +6,20 @@
   <i class='mdi-navigation-chevron-right'></i>
   {{#link-to 'projects'}} Projects {{/link-to}}
   <i class='mdi-navigation-chevron-right'></i>
-  {{#link-to 'project.show' model.project}} {{model.project.name}} {{/link-to}}
+  {{#link-to 'project.show' model.idea.project}} {{model.idea.project.name}} {{/link-to}}
   <i class='mdi-navigation-chevron-right'></i>
-  {{model.name}}
+  {{model.idea.name}}
 </div>
 
 <div class="row">
   <div class="col s12 m8 l9">
     <div class="card">
       <div class="card-content">
-        <span class="card-title">{{model.name}}</span>
-        {{text-blob value=model.description}}
+        <span class="card-title">{{model.idea.name}}</span>
+        {{text-blob value=model.idea.description}}
       </div>
       <div class="card-action">
-        {{#link-to 'idea.edit' model}}Edit{{/link-to}}
+        {{#link-to 'idea.edit' model.idea}}Edit{{/link-to}}
       </div>
     </div>
 
@@ -30,7 +30,7 @@
         Comments
         </h5>
       </li>
-      {{#each model.comments as |comment|}}
+      {{#each model.idea.comments as |comment|}}
       <li class='collection-item avatar'>
         <i class='mdi-social-person circle grey lighten-2'></i>
         <span class="title">Title</span>
@@ -83,23 +83,7 @@
       </div>
     </div>
 
-    <div class="card">
-      <div class="card-content">
-        <h5 class="grey-text center-align text-darken-4">Influence</h5>
-        {{#each model.ratings as |rating|}}
-          {{field/mdi-range title=rating.factor.name negative=rating.factor.negative value=rating.value}}
-        {{/each}}
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card-content">
-        <h5 class="grey-text center-align text-darken-4">Influence</h5>
-        {{#each model.ratings as |rating|}}
-          {{field/mdi-progress title=rating.factor.name negative=rating.factor.negative value=rating.value}}
-        {{/each}}
-      </div>
-    </div>
+    {{idea-influence ratings=model.idea.ratings areas=model.areas canEdit=true}}
 
   </div>
 </div>

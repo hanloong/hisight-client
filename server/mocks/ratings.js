@@ -5,6 +5,8 @@ module.exports = function(app) {
     {id: 1, idea: 1, factor: 1, value: 40, description: 'Some text here'},
     {id: 2, idea: 1, factor: 2, value: 30, description: 'Some text here'},
     {id: 3, idea: 1, factor: 3, value: 90, description: 'Some text here'},
+    {id: 4, idea: 1, factor: 4, value: 40, description: 'Some text here'},
+    {id: 5, idea: 1, factor: 5, value: 80, description: 'Some text here'},
   ]
 
   ratingsRouter.get('/', function(req, res) {

@@ -5,6 +5,8 @@ module.exports = function(app) {
     {id: 1, name: 'Productivity', weight: 1.0, negative: false, area_id: 1},
     {id: 2, name: 'Happiness', weight: 1.0, negative: false, area_id: 1},
     {id: 3, name: 'Risk', weight: 1.0, negative: true, area_id: 1},
+    {id: 4, name: 'Upfront cost', weight: 1.0, negative: true, area_id: 2},
+    {id: 5, name: 'Revenue', weight: 1.0, negative: false, area_id: 2},
   ]
 
   factorsRouter.get('/', function(req, res) {
