@@ -5,10 +5,11 @@ var Funnel = require('broccoli-funnel');
 
 var app = new EmberApp({
   sassOptions: {
-    includePaths: ['bower_components/materialize/sass'],
+    includePaths: ['bower_components/materialize/sass', 'vendor/redactor'],
     extension: ['sass']
   }
 });
+app.import('vendor/redactor/redactor.min.js');
 
 app.import('bower_components/materialize/bin/materialize.js');
 app.import('bower_components/materialize/bin/materialize.js', {
