@@ -1,22 +1,29 @@
 @import '../colors'
 
 $chart-height: 200px
+$chart-text-height: 35px
 
 .dashboard
   margin: 0
   padding: 0
-  .dashboard-chart
+
+.dashboard-chart
+  text-align: center
+  .chart-wrapper
     position: relative
-    text-align: center
+    padding: 0
+    margin: 0
     .chart-doughnut-inside
       position: absolute
       top: 50%
-      margin-top: -35px
-      font-size: 35px
-      line-height: 35px
+      font-size: $chart-text-height
+      margin-top: -($chart-text-height / 2)
+      line-height: $chart-text-height
       width: 100%
       text-align: center
-    .chart-title
-      display: block
-      margin-right: -20px
-      margin-bottom: 20px
+  .chart-title
+    display: block
+    margin-bottom: 20px
+
+.card-graph
+  padding-top: 20px

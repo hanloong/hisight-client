@@ -1,27 +1,30 @@
 <div class="row dashboard">
   <div class='col s12 m8'>
 
-    <div class='card'>
-      <div class='card-content'>
+    <div class='card card-graph'>
 
         <div class='col s12 l6 dashboard-chart'>
-          {{ember-chart type='doughnut' options=model.ideasByProject.options data=model.ideasByProject.chartData}}
-          <div class='chart-doughnut-inside'>
-            499
+          <div class='chart-wrapper'>
+            {{ember-chart type='doughnut' options=model.ideasByProject.options data=model.ideasByProject.chartData}}
+            <div class='chart-doughnut-inside'>
+              499
+            </div>
           </div>
           <span class='chart-title'>Ideas by project</span>
         </div>
+
         <div class='col s12 l6 dashboard-chart'>
-          {{ember-chart type='pie' data=model.ideasByStatus.chartData options=model.ideasByStatus.options}}
+          <div class='chart-wrapper'>
+            {{ember-chart type='pie' data=model.ideasByStatus.chartData options=model.ideasByStatus.options}}
+          </div>
           <span class='chart-title'>Ideas by status</span>
         </div>
 
-      </div>
     </div>
 
-    <div class='card'>
-      <div class='card-content'>
-        <div class='col s12 center dashboard-chart'>
+    <div class='card card-grpah'>
+      <div class='col s12 center dashboard-chart'>
+        <div class='chart-wrapper'>
           {{ember-chart type='line' data=model.activity.chartData options=model.activity.options}}
         </div>
       </div>

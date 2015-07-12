@@ -6,7 +6,7 @@
   <i class='mdi-navigation-chevron-right'></i>
   {{#link-to 'projects'}} Projects {{/link-to}}
   <i class='mdi-navigation-chevron-right'></i>
-  {{model.name}}
+  {{model.project.name}}
 </div>
 
 <div class="row">
@@ -38,8 +38,8 @@
       </div>
     </div>
 
-    {{#each model.ideas as |idea|}}
-      <div class="col s12">
+    <div class="col m12 l9">
+    {{#each model.project.ideas as |idea|}}
         <div class="card idea">
 
           <div class='col m2 s12 center-align no-padding'>
@@ -69,8 +69,21 @@
           </div>
 
         </div>
-      </div>
     {{/each}}
+    </div>
+    <div class='col m12 l3'>
+      <div class='card card-graph'>
+        <div class='dashboard-chart'>
+          <div class='chart-wrapper'>
+            {{ember-chart type='doughnut' options=model.chart.options data=model.chart.chartData}}
+            <div class='chart-doughnut-inside'>
+              499
+            </div>
+          </div>
+          <span class='chart-title'>Ideas by project</span>
+        </div>
+      </div>
+    </div>
 
   </div>
 </div>
