@@ -1,15 +1,47 @@
-<div class="row">
-  <div class='col s12'>
+<div class="row dashboard">
+  <div class='col s12 m8'>
+
     <div class='card'>
       <div class='card-content'>
-        <div class='col s12 l4 center dashboard-chart'>
-          {{ember-chart type='doughnut' options=model.options data=model.chartData height=200}}
+
+        <div class='col s12 l6 dashboard-chart'>
+          {{ember-chart type='doughnut' options=model.ideasByProject.options data=model.ideasByProject.chartData}}
           <div class='chart-doughnut-inside'>
             499
           </div>
-          <h6>Ideas in Projects</h6>
+          <span class='chart-title'>Ideas by project</span>
+        </div>
+        <div class='col s12 l6 dashboard-chart'>
+          {{ember-chart type='pie' data=model.ideasByStatus.chartData options=model.ideasByStatus.options}}
+          <span class='chart-title'>Ideas by status</span>
+        </div>
+
+      </div>
+    </div>
+
+    <div class='card'>
+      <div class='card-content'>
+        <div class='col s12 center dashboard-chart'>
+          {{ember-chart type='line' data=model.activity.chartData options=model.activity.options}}
         </div>
       </div>
     </div>
+
+  </div>
+
+  <div class='col s12 m4'>
+
+    <div class='collection'>
+      <div class="collection-item"><h6>Projects</h6></div>
+      {{#each model.projects key='@index' as |project|}}
+        {{#link-to 'project' project class='collection-item'}}
+          {{project.name}}
+        {{/link-to}}
+      {{/each}}
+      {{#link-to 'projects' class='collection-item'}}
+        View all projects
+      {{/link-to}}
+    </div>
+
   </div>
 </div>
