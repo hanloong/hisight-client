@@ -1,0 +1,16 @@
+@import '../colors'
+
+html body .redactor-box
+  .redactor-toolbar
+    box-shadow: none
+    li a
+      color: $brand-dark
+      &:hover, &.redactor-act, &:focus
+        color: $brand-default
+        background: none
+
+  .redactor-editor
+    border: none
+    border-bottom: 1px solid $brand-dark
+    &:focus
+      border-bottom: 2px solid $brand-default
