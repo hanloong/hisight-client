@@ -2,9 +2,9 @@
 
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: 'insight',
+    modulePrefix: 'hisight',
     environment: environment,
-    podModulePrefix: 'insight/pods',
+    podModulePrefix: 'hisight/pods',
     baseURL: '/',
     locationType: 'auto',
     EmberENV: {

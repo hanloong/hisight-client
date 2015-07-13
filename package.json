@@ -1,7 +1,7 @@
 {
-  "name": "insight",
-  "version": "0.0.0",
-  "description": "Small description for insight goes here",
+  "name": "Hisight",
+  "version": "0.0.1",
+  "description": "Idea collaboration and management",
   "private": true,
   "directories": {
     "doc": "doc",
