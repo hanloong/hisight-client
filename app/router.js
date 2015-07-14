@@ -6,28 +6,30 @@ var Router = Ember.Router.extend({
 });
 
 export default Router.map(function() {
-  this.route('dashboard', {path: '/'});
 
-  this.resource('projects', {path: '/projects'}, function() {
-    this.route('new');
+  this.route('app' , {path: '/app'}, function() {
 
-    this.resource('project', {path: '/:project_id'}, function() {
-      this.route('show', {path: ''});
-      this.route('edit', {path: '/edit'});
-      this.route('factors', {path: '/factors'});
+    this.route('dashboard', {path: '/'});
+    this.route('search');
 
-      this.resource('ideas', {path: '/ideas'}, function() {
-        this.route('new');
+    this.resource('projects', {path: '/projects'}, function() {
+      this.route('new');
 
-        this.resource('idea', {path: '/:idea_id'}, function() {
-          this.route('show', {path: ''});
-          this.route('edit', {path: '/edit'});
+      this.resource('project', {path: '/:project_id'}, function() {
+        this.route('show', {path: ''});
+        this.route('edit', {path: '/edit'});
+        this.route('factors', {path: '/factors'});
+
+        this.resource('ideas', {path: '/ideas'}, function() {
+          this.route('new');
+          this.resource('idea', {path: '/:idea_id'}, function() {
+            this.route('show', {path: ''});
+            this.route('edit', {path: '/edit'});
+          });
         });
       });
     });
-
   });
 
-  this.route('search');
   this.route('login');
 });

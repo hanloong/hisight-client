@@ -1,12 +1,12 @@
 <div class='breadcrumbs grey-text'>
-  {{#link-to 'dashboard'}}
+  {{#link-to 'app.dashboard'}}
     <i class='mdi-action-home'></i>
     Home
   {{/link-to}}
   <i class='mdi-navigation-chevron-right'></i>
-  {{#link-to 'projects'}} Projects {{/link-to}}
+  {{#link-to 'app.projects'}} Projects {{/link-to}}
   <i class='mdi-navigation-chevron-right'></i>
-  {{#link-to 'project.show' model.idea.project}} {{model.idea.project.name}} {{/link-to}}
+  {{#link-to 'app.project.show' model.idea.project}} {{model.idea.project.name}} {{/link-to}}
   <i class='mdi-navigation-chevron-right'></i>
   {{model.idea.name}}
 </div>
@@ -19,7 +19,7 @@
         {{text-blob value=model.idea.description}}
       </div>
       <div class="card-action">
-        {{#link-to 'idea.edit' model.idea}}Edit{{/link-to}}
+        {{#link-to 'app.idea.edit' model.idea}}Edit{{/link-to}}
       </div>
     </div>
 

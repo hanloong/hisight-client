@@ -18,14 +18,14 @@ export default Ember.Route.extend({
   actions: {
     createIdea: function(tempIdea) {
       tempIdea.save().then((idea) => {
-        this.transitionTo('idea.show', idea);
+        this.transitionTo('app.idea.show', idea);
       }).catch(function(errors) {
         console.log(errors);
       });
     },
     cancel: function(idea) {
       console.log(idea);
-      this.transitionTo('project.show', this.modelFor('ideas'));
+      this.transitionTo('app.project.show', this.modelFor('ideas'));
     }
   }
 });

@@ -1,5 +1,5 @@
 <div class='breadcrumbs grey-text'>
-  {{#link-to 'dashboard'}}
+  {{#link-to 'app.dashboard'}}
     <i class='mdi-action-home'></i>
     Home
   {{/link-to}}
@@ -15,8 +15,8 @@
         <p>{{project.description}}</p>
       </div>
       <div class="card-action">
-        {{#link-to 'project.show' project}}Show{{/link-to}}
-        {{#link-to 'project.edit' project}}Edit{{/link-to}}
+        {{#link-to 'app.project.show' project}}Show{{/link-to}}
+        {{#link-to 'app.project.edit' project}}Edit{{/link-to}}
       </div>
     </div>
   </div>

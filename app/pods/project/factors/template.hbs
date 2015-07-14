@@ -1,12 +1,12 @@
 <div class='breadcrumbs grey-text'>
-  {{#link-to 'dashboard'}}
+  {{#link-to 'app.dashboard'}}
     <i class='mdi-action-home'></i>
     Home
   {{/link-to}}
   <i class='mdi-navigation-chevron-right'></i>
-  {{#link-to 'projects'}} Projects {{/link-to}}
+  {{#link-to 'app.projects'}} Projects {{/link-to}}
   <i class='mdi-navigation-chevron-right'></i>
-  {{#link-to 'project.show' model}} {{model.name}} {{/link-to}}
+  {{#link-to 'app.project.show' model}} {{model.name}} {{/link-to}}
   <i class='mdi-navigation-chevron-right'></i>
   Factors
 </div>
@@ -18,7 +18,7 @@
 
   <div class='row sub-container grey lighten-4 card-action'>
     <button {{action 'save' model}} class='btn default col s12 l3'>Save changes</button>
-    {{#link-to 'project.edit' model class='btn dark col s12 l3'}}Back{{/link-to}}
+    {{#link-to 'app.project.edit' model class='btn dark col s12 l3'}}Back{{/link-to}}
     <button {{action 'newArea' model}} class='btn info col s12 l3'>Create new area</button>
   </div>
 </div>

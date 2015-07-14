@@ -14,13 +14,13 @@ export default Ember.Route.extend({
     createProject: function(tempProject, expires_at) {
       tempProject.set('expires_at', new Date(expires_at));
       tempProject.save().then((project) => {
-        this.transitionTo('projects.factors', project);
+        this.transitionTo('app.projects.factors', project);
       }).catch(function() {
       });
     },
     cancel: function(project) {
       console.log(project);
-      this.transitionTo('projects');
+      this.transitionTo('app.projects');
     }
   }
 });

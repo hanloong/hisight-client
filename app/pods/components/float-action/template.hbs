@@ -2,18 +2,18 @@
   <ul>
     {{#if project.id}}
       <li class='tooltipped' data-position="left" data-tooltip='Edit {{project.name}}'>
-      {{#link-to 'project.edit' project class='btn-floating btn waves-effect waves-light default'}}
+      {{#link-to 'app.project.edit' project class='btn-floating btn waves-effect waves-light default'}}
         {{fa-icon 'edit'}}
       {{/link-to}}
       </li>
       <li class='tooltipped' data-position="left" data-tooltip='Submit a new idea'>
-      {{#link-to 'ideas.new' project class='btn-floating btn waves-effect waves-light success'}}
+      {{#link-to 'app.ideas.new' project class='btn-floating btn waves-effect waves-light success'}}
         {{fa-icon 'lightbulb-o'}}
       {{/link-to}}
       </li>
     {{/if}}
     <li class='tooltipped' data-position="left" data-tooltip='Create new project'>
-    {{#link-to 'projects.new' class='btn-floating btn waves-effect waves-light warn'}}
+    {{#link-to 'app.projects.new' class='btn-floating btn waves-effect waves-light warn'}}
       {{fa-icon 'tasks'}}
     {{/link-to}}
     </li>

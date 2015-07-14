@@ -1,10 +1,10 @@
 <div class='breadcrumbs grey-text'>
-  {{#link-to 'dashboard'}}
+  {{#link-to 'app.dashboard'}}
   <i class='mdi-action-home'></i>
   Home
   {{/link-to}}
   <i class='mdi-navigation-chevron-right'></i>
-  {{#link-to 'projects'}} Projects {{/link-to}}
+  {{#link-to 'app.projects'}} Projects {{/link-to}}
   <i class='mdi-navigation-chevron-right'></i>
   {{model.project.name}}
 </div>
@@ -52,7 +52,7 @@
           <div class='col m10 s12'>
             <div class="card-content">
               <span class="card-title grey-text text-darken-4">
-                {{#link-to 'idea.show' idea class='name'}}
+                {{#link-to 'app.idea.show' idea class='name'}}
                   {{idea.name}}
                   <i class="fa fa-chevron-right right"></i>
                 {{/link-to}}

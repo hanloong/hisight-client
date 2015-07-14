@@ -37,11 +37,11 @@
     <div class='collection'>
       <div class="collection-item"><h6>Projects</h6></div>
       {{#each model.projects key='@index' as |project|}}
-        {{#link-to 'project' project class='collection-item'}}
+        {{#link-to 'app.project' project class='collection-item'}}
           {{project.name}}
         {{/link-to}}
       {{/each}}
-      {{#link-to 'projects' class='collection-item'}}
+      {{#link-to 'app.projects' class='collection-item'}}
         View all projects
       {{/link-to}}
     </div>
