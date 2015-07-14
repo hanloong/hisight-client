@@ -1,13 +1,8 @@
 <header>
-  {{top-nav}}
+  {{top-nav session=session invalidateSession='invalidateSession'}}
   {{side-nav}}
 </header>
 <main>
-  {{#if session.isAuthenticated}}
-    <a {{ action 'invalidateSession' }}>Logout</a>
-  {{else}}
-    {{#link-to 'login'}}Login{{/link-to}}
-  {{/if}}
   <div class='container'>
     {{outlet}}
   </div>

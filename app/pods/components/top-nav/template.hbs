@@ -19,7 +19,9 @@
       <li>
         <a href="#!" class='dropdown-button' data-activates='dropdown1' data-beloworigin='true'><i class="mdi-social-notifications"></i></a>
       </li>
-      <li><a href="exit.html"><i class="mdi-action-settings-power"></i></a></li>
+      {{#if session.isAuthenticated}}
+        <li><a href="#" {{ action 'invalidateSession' }}><i class="mdi-action-settings-power"></i></a></li>
+      {{/if}}
     </ul>
   </div>
 </nav>

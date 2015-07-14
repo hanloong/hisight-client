@@ -1,4 +1,5 @@
 import Ember from 'ember';
+import AuthenticatedRouteMixin from 'simple-auth/mixins/authenticated-route-mixin';
 
 var colors = {
   gray: '#263238',
@@ -89,7 +90,7 @@ var statusData = [
 }
 ];
 
-export default Ember.Route.extend({
+export default Ember.Route.extend(AuthenticatedRouteMixin, {
   model: function() {
     return {
       ideasByProject: {
