@@ -39,7 +39,7 @@
     </div>
 
     <div class="col m12 l9">
-    {{#each model.project.ideas as |idea|}}
+    {{#each model.project.ideas key='@index' as |idea|}}
         <div class="card idea">
 
           <div class='col m2 s12 center-align no-padding'>

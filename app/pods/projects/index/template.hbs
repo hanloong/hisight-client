@@ -7,7 +7,7 @@
   Projects
 </div>
 <div class="row">
-  {{#each model.projects as |project|}}
+  {{#each model.projects key='@index' as |project|}}
   <div class="col s12 l6">
     <div class="card">
       <div class="card-content">

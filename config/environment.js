@@ -50,6 +50,7 @@ module.exports = function(environment) {
     'default-src': "'none'",
     'img-src': "'self' avatars1.githubusercontent.com gravatar.com",
     'style-src': "'self' 'unsafe-inline'",
+    'font-src': "*",
     'report-uri': "'self'",
     'connect-src': ENV.apiURL
   };

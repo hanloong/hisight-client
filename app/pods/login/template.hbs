@@ -4,10 +4,14 @@
     <div class='card'>
       <form {{action 'authenticate' on='submit'}}>
         <div class='card-form'>
-          <label for="identification">Login</label>
-          {{input id='identification' placeholder='Enter Login' value=identification}}
-          <label for="password">Password</label>
-          {{input id='password' placeholder='Enter Password' type='password' value=password}}
+          <div class='input-field'>
+            <i class='mdi-action-perm-identity prefix'></i>
+            {{input id='identification' placeholder='Enter Email Address' value=identification}}
+          </div>
+          <div class='input-field'>
+            <i class="mdi-action-lock prefix"></i>
+            {{input id='password' placeholder='Enter Password' type='password' value=password}}
+          </div>
         </div>
         <div class='card-action'>
           <button class='btn info' type="submit">Login</button>

@@ -12,7 +12,7 @@
 </div>
 
 <div class="row">
-  {{#each model.areas as |area|}}
+  {{#each model.areas key='@index' as |area|}}
     {{forms/area-edit area=area newFactor='newFactor'}}
   {{/each}}
 

@@ -107,7 +107,7 @@ export default Ember.Route.extend({
         chartData: lineData,
         options: {responsive: true}
       },
-      projects: this.store.find('project')
+      projects: this.store.findAll('project')
     };
   }
 });
