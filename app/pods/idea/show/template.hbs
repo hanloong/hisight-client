@@ -4,9 +4,9 @@
     Home
   {{/link-to}}
   <i class='mdi-navigation-chevron-right'></i>
-  {{#link-to 'app.projects'}} Projects {{/link-to}}
+  {{#link-to 'projects'}} Projects {{/link-to}}
   <i class='mdi-navigation-chevron-right'></i>
-  {{#link-to 'app.project.show' model.idea.project}} {{model.idea.project.name}} {{/link-to}}
+  {{#link-to 'project.show' model.idea.project}} {{model.idea.project.name}} {{/link-to}}
   <i class='mdi-navigation-chevron-right'></i>
   {{model.idea.name}}
 </div>
@@ -19,7 +19,7 @@
         {{text-blob value=model.idea.description}}
       </div>
       <div class="card-action">
-        {{#link-to 'app.idea.edit' model.idea}}Edit{{/link-to}}
+        {{#link-to 'idea.edit' model.idea}}Edit{{/link-to}}
       </div>
     </div>
 

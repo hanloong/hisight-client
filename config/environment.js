@@ -42,6 +42,10 @@ module.exports = function(environment) {
 
   }
 
+  ENV['simple-auth'] = {
+    routeAfterAuthentication: 'app.dashboard'
+  };
+
   ENV.contentSecurityPolicy = {
     'default-src': "'none'",
     'img-src': "'self' avatars1.githubusercontent.com gravatar.com",
