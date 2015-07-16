@@ -21,9 +21,6 @@ module.exports = function(environment) {
   };
 
   if (environment === 'development') {
-    ENV['simple-auth-oauth2'] = {
-      serverTokenEndpoint: 'http://localhost:3000/oauth/token'
-    }
     ENV.apiHost = 'http://localhost:3000/';
   }
 
@@ -45,7 +42,13 @@ module.exports = function(environment) {
   }
 
   ENV['simple-auth'] = {
-    routeAfterAuthentication: 'app.dashboard'
+    routeAfterAuthentication: 'app.dashboard',
+    authorizer: 'simple-auth-authorizer:oauth2-bearer',
+    crossOriginWhitelist: [ '*', ENV.apiHost ]
+  };
+
+  ENV['simple-auth-oauth2'] = {
+    serverTokenEndpoint:  ENV.apiHost + '/oauth/token',
   };
 
   ENV.contentSecurityPolicy = {
