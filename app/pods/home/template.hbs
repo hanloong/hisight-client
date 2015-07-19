@@ -19,34 +19,76 @@
     <h2>Ideas worth sharing</h2>
   </div>
 </header>
-<section class='laptop'>
+
+<section class='home laptop'>
   <div class='content'>
     <h3>What should you be working on next</h3>
     <h5>Collect, debate and priorities the thousands of ideas within your company.</h5>
   </div>
 </section>
+
+<section class='home desktop'>
+  <div class='content'>
+    <h3>What should you be working on next</h3>
+    <h5>Collect, debate and priorities the thousands of ideas within your company.</h5>
+  </div>
+</section>
+<section class='register'>
+  <div class='row'>
+    <div class="card col l6 s12 offset-l3">
+
+      <div class='card-content'>
+        <form>
+          <div class='center'>
+            <span class="card-title">Sign Up Form</span>
+          </div>
+          <div class='row'>
+            <div class="input-field col s12">
+              {{input id='name' name='name' placeholder='What people call you' value=model.name}}
+              <label class="active" for="name">Name</label>
+            </div>
+            <div class="input-field col s12">
+              {{input id='email' name='email' placeholder='Email used when logging into hisight' value=model.email}}
+              <label class="active" for="name">Email</label>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div class='card-action'>
+        <button {{action 'register'}} class='btn btn-flat info'>
+          Lets get cracking
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
 <footer class="page-footer">
   <div class="container">
     <div class="row">
       <div class="col l6 s12">
-        <h5 class="white-text">Footer Content</h5>
-        <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+        <h5>Hisight</h5>
+        <p>Idea's worth sharing.</p>
       </div>
       <div class="col l4 offset-l2 s12">
-        <h5 class="white-text">Links</h5>
+        <h5>Links</h5>
         <ul>
-          <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-          <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-          <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-          <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+          <li>
+            {{#link-to 'login'}}
+              Login
+            {{/link-to}}
+          </li>
         </ul>
       </div>
     </div>
   </div>
   <div class="footer-copyright">
     <div class="container">
-      © 2014 Copyright Text
-      <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+      Built by sixtythree.io © 2015
+      <span class='right'>
+        SixtyThree Australia, ABN 91126749519
+      </span>
     </div>
   </div>
 </footer>

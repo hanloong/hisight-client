@@ -36,15 +36,27 @@ html header.homepage
 footer.page-footer
   background-color: $brand-dark
   margin-top: 0
+  color: white
+  a
+    color: white
 
-section.laptop
-  background: linear-gradient(rgba($brand-default, 0.7),rgba($brand-default, 0.7)), url('/assets/images/laptop-desk.jpg')
+
+section.register
+  padding: 30px 0 20px 0
+
+section.home
+  &.laptop
+    background: linear-gradient(rgba($brand-default, 0.7),rgba($brand-default, 0.7)), url('/assets/images/laptop-desk.jpg')
+  &.desktop
+    background: linear-gradient(rgba($brand-info, 0.7),rgba($brand-info, 0.7)), url('/assets/images/laptop-desk.jpg')
   background-size: cover
   min-height: 400px
   color: white
-  padding: 40px
-  text-align: center
+  display: flex;
+  align-items: center;
+  justify-content: center;
   h1, h2, h3
+    text-align: center
     font-weight: 800
   .content
     max-width: 768px

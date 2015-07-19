@@ -7,7 +7,7 @@ let Project = DS.Model.extend({
   incognito:            DS.attr('boolean', {defaultValue: false}),
   voting:               DS.attr('boolean', {defaultValue: true}),
   end_at:               DS.attr('date'),
-  user:                 DS.belongsTo('user'),
+  user:                 DS.belongsTo('user', {async: true}),
   ideas:                DS.hasMany('idea', {async: true}),
   areas:                DS.hasMany('area', {async: true}),
 });
