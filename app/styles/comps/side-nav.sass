@@ -1,21 +1,6 @@
 @import '../colors'
 
 .user-profile
-  .logo
-    font-size: 24px
-    margin-bottom: 10px
-    padding-left: 10px
-    color: lighten($brand-light-gray, 30%)
-    i
-      background: $brand-default
-      display: inline-block
-      font-size: 22px
-      line-height: 24px
-      padding: 1px 0
-      width: 25px
-      text-align: center
-      border-radius: 2px
-      border: 1px solid darken($brand-default, 10%)
   padding: 10px 5px
   background: url('/assets/images/profile-bg.png')
   .settings
@@ -26,3 +11,35 @@
       color: color('grey', 'darken-1')
       &:hover, &:focus
         color: color('grey', 'lighten-1')
+
+.logo
+  font-size: 24px
+  margin-bottom: 10px
+  padding-left: 10px
+  color: lighten($brand-light-gray, 30%)
+  i
+    background: $brand-default
+    display: inline-block
+    font-size: 22px
+    line-height: 24px
+    padding: 1px 0
+    width: 24px
+    text-align: center
+    border-radius: 12px
+    border: 1px solid darken($brand-default, 10%)
+
+  &.dark-logo
+    color: darken($brand-light-gray, 30%)
+    i
+      color: lighten($brand-light-gray, 30%)
+      background: darken($brand-light-gray, 30%)
+      border: 1px solid darken($brand-light-gray, 50%)
+  &.md-logo
+    font-size: 34px
+    margin: 20px 0
+    i
+      width: 34px
+      display: inline-block
+      font-size: 30px
+      line-height: 34px
+      border-radius: 17px

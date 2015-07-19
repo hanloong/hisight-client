@@ -6,7 +6,6 @@ var Router = Ember.Router.extend({
 });
 
 export default Router.map(function() {
-
   this.route('app' , {path: '/app'}, function() {
 
     this.route('dashboard', {path: '/'});
@@ -32,4 +31,5 @@ export default Router.map(function() {
   });
 
   this.route('login');
+  this.route('home', {path: '/'});
 });

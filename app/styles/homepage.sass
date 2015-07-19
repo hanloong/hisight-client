@@ -1,0 +1,54 @@
+@import colors
+
+html header.homepage
+  background: white
+  height: 100vh
+  min-height: 400px
+  padding-top: 15px
+  nav
+    background: none
+    box-shadow: none
+    padding: 0 20px
+    a
+      color: $brand-dark
+    li
+      padding-left: 25px
+      padding-right: 25px
+      &:active, &:hover
+        background: none
+      a
+        border-bottom: 2px solid $brand-dark
+        &:active, &:hover
+          border-bottom: 2px solid $brand-default
+          color: $brand-default
+    .logo i
+      display: block
+      width: 54px
+      height: 54px
+      line-height: 54px
+      margin-top: 5px
+      border-radius: 27px
+      color: white
+  .title
+    margin-top: 10%
+
+
+footer.page-footer
+  background-color: $brand-dark
+  margin-top: 0
+
+section.laptop
+  background: linear-gradient(rgba($brand-default, 0.7),rgba($brand-default, 0.7)), url('/assets/images/laptop-desk.jpg')
+  background-size: cover
+  min-height: 400px
+  color: white
+  padding: 40px
+  text-align: center
+  h1, h2, h3
+    font-weight: 800
+  .content
+    max-width: 768px
+    margin: 0 auto
+    h5
+      line-height: 1.4em
+

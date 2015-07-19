@@ -27,15 +27,15 @@ $switch-checked-lever-bg: desaturate(lighten($secondary-color, 25%), 25%)
 $datepicker-date-bg: $secondary-color
 
 // Navbar
-html header nav
+html header.app nav
   background: white
   color: $brand-dark
   i, a, .brand-logo
     color: $brand-dark
 
-// Top-Nav
-html header nav .brand-logo
-  padding: 0 20px
+  // Top-Nav
+  .brand-logo
+    padding: 0 20px
 
 // Side-Nav - Fixed
 html header .side-nav.fixed
@@ -51,7 +51,7 @@ html header .side-nav.fixed
       a
         color: $brand-dark
 
-header, main, footer
+header.app, main, footer
   padding-left: 240px
 
 @media only screen and (max-width : 992px)
