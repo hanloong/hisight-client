@@ -3,7 +3,7 @@
     <div class="card-content">
       <h5 class="center-align">{{area.name}}</h5>
       {{#each ratings key='@index' as |rating|}}
-        {{field/idea-rating rating=rating area=area factor=rating.factor canEdit=canEdit}}
+        {{field/idea-rating rating=rating area=area factorArea=rating.factor.area factor=rating.factor canEdit=canEdit}}
       {{/each}}
     </div>
   </div>

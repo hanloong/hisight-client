@@ -1,7 +1,7 @@
 {{#if withinArea}}
   {{#if canEditor}}
-    {{field/mdi-range title=rating.factor.name negative=rating.factor.negative value=rating.value}}
+    {{field/mdi-range title=rating.factor.name negative=rating.factor.is_negative value=rating.score}}
   {{else}}
-    {{field/mdi-progress title=rating.factor.name negative=rating.factor.negative value=rating.value}}
+    {{field/mdi-progress title=rating.factor.name negative=rating.factor.is_negative value=rating.score}}
   {{/if}}
 {{/if}}

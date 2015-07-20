@@ -3,7 +3,7 @@ import DS from 'ember-data';
 var Factor = DS.Model.extend({
   name:         DS.attr('string'),
   weight:       DS.attr('number', {defaultValue: 50}),
-  negative:     DS.attr('boolean'),
+  is_negative:  DS.attr('boolean'),
   area:         DS.belongsTo('area', {async: true}),
   delete:       DS.attr('boolean', {defaultValue: false}),
 
