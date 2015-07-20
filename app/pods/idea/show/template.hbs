@@ -16,7 +16,7 @@
     <div class="card">
       <div class="card-content">
         <span class="card-title">{{model.idea.name}}</span>
-        {{text-blob value=model.idea.description}}
+        {{{model.idea.description}}}
       </div>
       <div class="card-action">
         {{#link-to 'idea.edit' model.idea}}Edit{{/link-to}}
@@ -34,7 +34,7 @@
       <li class='collection-item avatar'>
         <i class='mdi-social-person circle grey lighten-2'></i>
         <span class="title">Title</span>
-        {{text-blob value=comment.comment}}
+        {{{comment.comment}}}
       </li>
       {{/each}}
     </ul>

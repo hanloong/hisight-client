@@ -12,7 +12,7 @@
 
       <div class="row">
         <div class="input-field col s12">
-          {{textarea id='description' class="materialize-textarea" name='description' placeholder='Give an introduction to what this project is about.' value=model.description}}
+          {{field/redactor-editor inputId='description' placeholder='Add something witty.' value=model.description}}
           <label class="active" for="description">Description</label>
         </div>
       </div>

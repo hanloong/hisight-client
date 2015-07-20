@@ -1,6 +1,7 @@
 @import '../colors'
 
 html body .redactor-box
+  margin-top: 20px
   .redactor-toolbar
     box-shadow: none
     li a
@@ -12,5 +13,10 @@ html body .redactor-box
   .redactor-editor
     border: none
     border-bottom: 1px solid $brand-dark
+    padding: 5px
     &:focus
       border-bottom: 2px solid $brand-default
+
+  .redactor-placeholder:after
+    top: 5px
+    left: 5px
